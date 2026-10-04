@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="c11c-fe58-2043-31f5" name="Warhammer Fantasy Battles 5th Edition" revision="3" battleScribeVersion="2.03" authorName="WHFB5 community starter project">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="c11c-fe58-2043-31f5" name="Warhammer Fantasy Battles 5th Edition" revision="5" battleScribeVersion="2.03" authorName="WHFB5 community starter project">
   <costTypes>
     <costType id="0044-15f1-782b-00ea" name="pts" defaultCostLimit="2000" hidden="false" />
   </costTypes>
@@ -9,6 +9,8 @@
     <categoryEntry id="2816-ca43-d125-0d51" name="Commoners" hidden="false" />
     <categoryEntry id="a2b5-2a83-607e-e007" name="Regiments" hidden="false" />
     <categoryEntry id="823f-19af-4133-9883" name="Monsters" hidden="false" />
+    <categoryEntry id="f175-e819-c0aa-03bb" name="Mobs" hidden="false" />
+    <categoryEntry id="4c77-e418-2e5f-de22" name="War Machines" hidden="false" />
     <categoryEntry id="d253-1b4b-ad06-3e9c" name="Allies" hidden="false" />
     <categoryEntry id="0681-c1b7-fc6b-2603" name="Rules reference" hidden="false" />
   </categoryEntries>
@@ -18,6 +20,9 @@
     <publication id="7f78-0cdc-b6a0-484e" name="Warhammer Magic (5th edition)" shortName="Magic" />
     <publication id="d7c9-7773-4408-58f6" name="Warhammer Rulebook (5th edition)" shortName="Rulebook" />
     <publication id="7bde-49a8-e4f5-1832" name="Warhammer Battle Book (5th edition)" shortName="Battle Book" />
+    <publication id="7839-e5ae-5fb9-1604" name="Warhammer Armies: Lizardmen (1997)" shortName="Lizardmen" />
+    <publication id="b4e3-1e3f-4601-d0dd" name="Warhammer Armies: Orcs &amp; Goblins (1996)" shortName="Orcs &amp; Goblins" />
+    <publication id="c115-e636-a63a-a216" name="Warhammer Armies: Vampire Counts (1999)" shortName="Vampire Counts" />
   </publications>
   <profileTypes>
     <profileType id="e25d-f63f-8d67-4bda" name="Unit">
@@ -398,6 +403,270 @@ Reference: Rulebook, printed p. 86–87. Rules summary; consult the source for d
       <description>A musician fights as an ordinary trooper and stands in the front rank. In a drawn combat, each side rolls one D6 per musician fighting. Compare the highest individual die on each side: the higher result wins combat by 1; equal highest results leave a draw. If only one side has a musician it wins by 1 automatically. An ordinary trooper may be removed in the musician's place. A musician is not automatically lost when the unit breaks and cannot be captured as a trophy.
 Reference: Rulebook, printed p. 87. Rules summary; consult the source for diagrams and edge cases.</description>
     </rule>
+    <rule id="bd8e-b04d-8ac4-5a7c" name="Cold-blooded" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73">
+      <description>For Leadership tests roll three D6 and keep the lowest two.
+Reference: Lizardmen, printed p. 59, 73. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="f211-4987-4871-7e06" name="Scaly skin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="60–65, 72">
+      <description>Natural armour: Skinks 6+, Saurus 5+, Kroxigor and Stegadons 4+. Equipment can improve this. Strength modifiers cannot worsen the save beyond 6+, but attacks that prohibit armour saves still negate it.
+Reference: Lizardmen, printed p. 60–65, 72. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="2f71-7b20-9e47-3092" name="Slann Mage-Priest" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73">
+      <description>The Slann, bearers and palanquin have one combined profile. Magic items affect that entire model. Shield of the Old Ones gives a separate, unmodified 4+ save against wounds, including attacks that ignore armour. At the start of the Lizardman magic phase each Slann may exchange one spell with another Slann in the battle. No additional Slann may have a higher magic level than the General. Only the General carries the army battle standard; its magic banner does not use one of his magic-item slots.
+Reference: Lizardmen, printed p. 59, 73. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="ae10-7fb4-ae2b-daf9" name="Saurus bite" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="60">
+      <description>One attack in the printed profile is a bite. Resolve it at the Saurus's basic Strength without weapon benefits; the other attacks use the selected weapon.
+Reference: Lizardmen, printed p. 60. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="f575-77e7-1aea-c3ab" name="Aquatic" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="61–63">
+      <description>Move through water features without movement penalties and receive soft cover while in them.
+Reference: Lizardmen, printed p. 61–63. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="d2eb-723d-0466-0ccf" name="Skinks and poisoned missiles" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="61, 76">
+      <description>Skinks on foot may skirmish unless their unit includes Kroxigor. They are aquatic. Purchased poison gives +1 Strength to their short-bow and javelin hits.
+Reference: Lizardmen, printed p. 61, 76. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="1a1e-9087-5474-a7af" name="Kroxigor among Skinks" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="62, 76">
+      <description>One Kroxigor may join for every eight Skinks. A mixed unit cannot skirmish, uses Kroxigor Leadership and counts each Kroxigor as four Skinks for ranks. Place Kroxigor centrally in the front or second rank; they can fight over one rank of Skinks, and enemies can strike back at them. Randomise shooting: 1–4 Skink, 5–6 Kroxigor. See the book for formation diagrams.
+Reference: Lizardmen, printed p. 62, 76. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="1b8e-f8a1-a44b-86d2" name="Kroxigor" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="62, 77">
+      <description>Cause fear, are aquatic and have 4+ scaly-skin armour. Their double-handed weapons give the normal weapon bonus to their basic Strength. Apply the special band-size rule when fielded separately.
+Reference: Lizardmen, printed p. 62, 77. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="3923-1374-a70a-ef56" name="Bands of up to five" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="77">
+      <description>For a troop type using this rule, 1–5 models form one band; 6–10 may form up to two; 11–15 up to three, and so on. Divide models as evenly as possible among the chosen bands. Check the aggregate model count and distribution manually; this catalogue does not equate each band with an independently purchased allowance. Also see Orcs &amp; Goblins p. 92 and Vampire Counts p. 66 for their corresponding troops.
+Reference: Lizardmen, printed p. 77. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="3c07-95d7-2662-d79b" name="Cold Ones" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="65">
+      <description>Cause fear. Test for stupidity until they have fought their first round of close combat. Use the rider's Leadership and cold-blooded roll. A Cold One improves its rider's armour by two points instead of the usual one.
+Reference: Lizardmen, printed p. 65. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="d460-cef5-54f8-d01a" name="Terradon riders" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="66–67">
+      <description>Flying, skirmishing cavalry with two Skink riders per model. Two rider casualties remove a model. Total armour save 5+, with the scaly-skin minimum of 6+. On its first charge each Terradon drops one rock causing an automatic S6 hit before normal attacks. If charged before dropping the rocks, discard them unused.
+Reference: Lizardmen, printed p. 66–67. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="86ad-c7d6-040d-a369" name="Stegadon" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="64–65, 77">
+      <description>Causes fear, has 4+ scaly skin and inflicts D6 S5 impact hits when charging. Randomise shooting: 1–2 howdah (ignore), 3–5 beast, 6 crew. In melee: 1 howdah (ignore), 2–4 beast, 5–6 crew. If all crew die, use the monster reaction rules. Four equipped Skinks are included in the army-list cost.
+Reference: Lizardmen, printed p. 64–65, 77. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="da0c-ec6d-e610-6e9a" name="Stegadon giant bow" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="64">
+      <description>Two crew operate this 36-inch bow using their Ballistic Skill. A hit is S5 and inflicts D3 wounds; armour saves apply. If it kills, continue through successive ranks at one less Strength per rank. It can shoot over intervening models, but not obstructing terrain.
+Reference: Lizardmen, printed p. 64. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="c0e7-fd80-e633-e545" name="Salamander hunting pack" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="63, 78">
+      <description>Acid shot: range 24 inches, small round template, roll to hit using BS. Hits are S4, D3 wounds, no armour saves. A miss scatters using scatter and artillery dice; a misfire eats a Skink runner. Four runners are included; use artillery-style crew handling and permitted transfers. A beast without runners is stupid. Shooting allocation: 1–4 runners, 5–6 Salamander.
+Reference: Lizardmen, printed p. 63, 78. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="a729-ef1f-fb1d-1881" name="Vampire bloodlines" hidden="false" publicationId="c115-e636-a63a-a216" page="26–30">
+      <description>All Vampires in an army belong to one family: Von Carstein, Necrarch, Blood Dragon or Lahmia. A Thrall must buy exactly one power, a Count one or two, and a Lord one to three. Powers marked Lord only cannot be taken by Counts or Thralls. Bloodline powers do not occupy magic-item slots. Pick the family once in the army reference entry.
+Reference: Vampire Counts, printed p. 26–30. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="d11e-3731-0222-44e5" name="Undead" hidden="false" publicationId="c115-e636-a63a-a216" page="49–50">
+      <description>Undead cause fear, ignore psychology and poison other than magical/warpstone effects, cannot march, and cannot choose flee or stand-and-shoot reactions. Vampires, Necromancers and Ghouls have stated exceptions. Undead do not take Break tests: each defeated unit instead suffers one extra wound per point of combat-result deficit, with no saves. Allocate losses among different components as described in the book. When the General dies, unled Undead units, independent Undead monsters and the Black Coach are destroyed; characters survive, and character-led units suffer D6 unsaveable wounds. Ghouls and independent Necromancers take Panic tests.
+Reference: Vampire Counts, printed p. 49–50. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="1e6d-5f93-94e7-b409" name="Vampires" hidden="false" publicationId="c115-e636-a63a-a216" page="50">
+      <description>A Vampire alone may march and use normal charge reactions. It is immune to psychology but takes Break tests when fighting alone. While with an Undead unit use that unit's crumbling rules; once the unit is gone use the Vampire's normal Break test, including combat-result modifiers.
+Reference: Vampire Counts, printed p. 50. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="4330-8bfe-ae9c-b8eb" name="Living Necromancers" hidden="false" publicationId="c115-e636-a63a-a216" page="51">
+      <description>Necromancers are living characters. They do not normally use Undead psychology, movement or Break rules. While leading an Undead unit they follow its relevant rules, but do not gain immunity to poison. After the unit is destroyed, take normal Break tests.
+Reference: Vampire Counts, printed p. 51. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="369a-00ed-fa25-3a9d" name="Necromancy and recasting" hidden="false" publicationId="c115-e636-a63a-a216" page="31">
+      <description>Choose Necromantic spells rather than dealing them randomly, highest-level wizard first; roll off ties. A Vampire Lord has magic level 3 but only two spell cards; a Count level 2 and one card. Necromancers normally have one card per level. Recast Necromantic spells by spending the required Power again: Lord 5+, Count 6; Necromancer Lord automatic, Master 2+, Champion 3+, basic 4+. Each successful spell may affect a given target only once in that phase; a dispelled attempt does not use that target allowance. Follow the book's immediate-recast sequence. Raised additions match their unit's equipment and do not increase its victory value; new Skeleton units have hand weapons/shields and new raised units are worth one victory point if destroyed. Dark Mist ends if its caster flees. Vanhel's Danse applies only to Skeletons, Zombies, Wights (including mounted Wights and Lords) and Wraiths.
+Reference: Vampire Counts, printed p. 31. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="d1a9-eb56-dc6f-3259" name="Wight weapons" hidden="false" publicationId="c115-e636-a63a-a216" page="51">
+      <description>Hits from a Wight's ordinary weapon cause D3 wounds. This does not combine with a magic weapon: use the magic weapon's own rules instead.
+Reference: Vampire Counts, printed p. 51. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="e083-7cdd-a113-492a" name="Ethereal" hidden="false" publicationId="c115-e636-a63a-a216" page="52, 54, 58">
+      <description>Pass through terrain and buildings without penalty, but not through living models. Only magical weapons, spells and Daemons can harm these creatures directly. Losing combat can still cause Undead crumbling wounds.
+Reference: Vampire Counts, printed p. 52, 54, 58. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="f5d9-020c-5810-cad7" name="Wraith" hidden="false" publicationId="c115-e636-a63a-a216" page="52">
+      <description>Ethereal and causes terror. Its chill attacks allow no armour saves. A Wraith may lead eligible Undead regiments as their champion.
+Reference: Vampire Counts, printed p. 52. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="f403-fb99-615c-4e9b" name="Zombie horde" hidden="false" publicationId="c115-e636-a63a-a216" page="52">
+      <description>An enemy cannot lap round Zombies. Zombies can lap round even after losing a round; if both sides have an always-lap ability, roll to decide. If a lapping unit is charged, reform first and then resolve subsequent lapping normally.
+Reference: Vampire Counts, printed p. 52. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="6118-80c8-05ac-9f01" name="Ghouls" hidden="false" publicationId="c115-e636-a63a-a216" page="53">
+      <description>Living creatures that cause fear; they do not otherwise use Undead rules. No characters, standard or musician. May use a General within 12 inches for Leadership. They can march and flee. If they outnumber their opponent they never take Break tests; if beaten while outnumbered they flee automatically.
+Reference: Vampire Counts, printed p. 53. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="901c-a5bf-8cca-165c" name="Vampire bats" hidden="false" publicationId="c115-e636-a63a-a216" page="54">
+      <description>Fly and skirmish. They cannot be driven off for losing combat while flying; apply their Undead combat-loss rules.
+Reference: Vampire Counts, printed p. 54. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="67f4-2d62-71e5-8bb9" name="Dire Wolves and Doom Wolves" hidden="false" publicationId="c115-e636-a63a-a216" page="55">
+      <description>Dire Wolves gain one Attack when charging. A Doom Wolf is treated as a champion but cannot buy magic items, issue or accept challenges, or use Look Out Sir.
+Reference: Vampire Counts, printed p. 55. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="80ad-ecd7-cef5-9cb6" name="Zombie Dragon" hidden="false" publicationId="c115-e636-a63a-a216" page="55">
+      <description>Flies and causes terror; cannot be driven off like a living flyer. Its 5+ armour save is unaffected by Strength. Pestilential breath uses the breath template: models hit suffer one wound on 4+, without mundane armour saves (magic armour can save). The cloud of flies imposes -1 to hit the dragon and rider in melee.
+Reference: Vampire Counts, printed p. 55. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="b33e-943f-0fc3-852a" name="Black Coach and Evocation of Death" hidden="false" publicationId="c115-e636-a63a-a216" page="56–57">
+      <description>Use chariot rules, with D6 S7 charge impacts. It continues after its driver dies; each slain Nightmare reduces Move by one. With no crew, melee attacks automatically hit its body. If the body is destroyed the Nightmares die but the Wraith may survive and join a unit as champion. The General's death destroys the Coach. Its magic standard gives no combat-result bonus. Count living models' wounds inflicted in melee by the Coach or friendly Undead within six inches. Apply cumulative benefits immediately: at 5 wounds D6+2 impacts; at 7 double Wraith/Nightmare Attacks; at 9 +1 Strength to both; at 12 enemies suffer -1 to hit it; at 15 it can march or charge triple distance, Wraith Attacks become triple, the Wraith’s unsaved wounds kill outright on 4+, and the entire model becomes immune to magic. Use the book for component allocation and destruction details.
+Reference: Vampire Counts, printed p. 56–57. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="e288-1f0d-9684-a4ce" name="Banshee howl" hidden="false" publicationId="c115-e636-a63a-a216" page="58">
+      <description>In the shooting phase choose an enemy within eight inches; no line of sight needed. In combat it may target only its own opponents. Roll 2D6+2 minus the target's Leadership: a positive result is that many wounds, with no saves, distributed like missile wounds. Psychology-immune targets are unaffected. Use applicable unit/General Leadership; for composite models use the highest component Leadership.
+Reference: Vampire Counts, printed p. 58. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="f460-8cb6-76f8-4263" name="Winged Nightmare" hidden="false" publicationId="c115-e636-a63a-a216" page="58">
+      <description>Flies. Gains +2 Strength when charging.
+Reference: Vampire Counts, printed p. 58. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="bbef-1932-e2f5-05b1" name="Animosity" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="16–17">
+      <description>Eligible Orc and Goblin mobs not already fighting test at the start of their turn. On a D6 roll of 1 consult a second D6: 1 attack the nearest eligible friendly mob by shooting or charging (otherwise squabble); 2–5 squabble and take no action, including shaman spellcasting; 6 move a normal move towards the nearest enemy, possibly charging, then continue the normal turn. Friendly combat is resolved immediately and prevents further actions. Black Orc units and mobs led by Black Orc Warbosses/Big Bosses are immune; individual characters, war machines, chariots, Fanatics, Hoppers, Trolls and Snotlings do not test. Consult the diagrams for determining eligible friendly targets.
+Reference: Orcs &amp; Goblins, printed p. 16–17. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="dcf3-6838-e18c-4a93" name="Orcs ignore Goblin panic" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="66–69">
+      <description>Orcs ignore Panic caused by Goblin units breaking or fleeing past them. Other Panic causes still apply.
+Reference: Orcs &amp; Goblins, printed p. 66–69. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="251c-cd37-f254-88fd" name="Black Orc discipline" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="68">
+      <description>Black Orcs neither test for animosity nor become its victims. A Black Orc Warboss or Big Boss confers animosity immunity on a mob he leads. Black Orc units ignore Panic from other Orc/Goblin units breaking or fleeing past; a different mob merely led by a Black Orc does not gain that Panic exemption. Non-Black-Orc characters cannot provide their Leadership to a Black Orc unit.
+Reference: Orcs &amp; Goblins, printed p. 68. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="2b29-36e2-2d63-3823" name="Goblins fear Elves" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="70–71, 77">
+      <description>A Goblin unit fears an Elf unit unless the Goblins outnumber it by at least two to one.
+Reference: Orcs &amp; Goblins, printed p. 70–71, 77. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="0e36-5197-08fa-a5ee" name="Night Goblin hatred" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="71">
+      <description>Night Goblins hate Dwarfs; apply the normal hatred rules.
+Reference: Orcs &amp; Goblins, printed p. 71. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="df6b-153b-40af-e22c" name="Savage Orc tattoos" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="67, 90">
+      <description>Savage Orcs are frenzied. With no body armour their tattoos give a 6+ armour save, improved by shields and cavalry; Strength modifiers cannot worsen it beyond 6+. Body armour removes the tattoo benefit. Savage Orcs on foot may skirmish.
+Reference: Orcs &amp; Goblins, printed p. 67, 90. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="43a8-75a6-ce1c-e4f9" name="War Boars" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="80">
+      <description>A rider suffers -1 Leadership on all Leadership tests. The mount improves armour by two points rather than one. The Boar gains +2 Strength on the charge.
+Reference: Orcs &amp; Goblins, printed p. 80. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="4650-bbb9-4035-a299" name="Giant Spider movement" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="79">
+      <description>Giant Spiders cross difficult ground and obstacles without movement penalties.
+Reference: Orcs &amp; Goblins, printed p. 79. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="d659-8975-46b0-ce4e" name="Night Goblin Fanatics" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="72–73">
+      <description>Hide up to three Fanatics in an ordinary Night Goblin mob. When an enemy comes within eight inches, halt its movement and release every Fanatic: choose each direction and move 2D6 inches. Each unit passed through suffers D6 S5 hits with no armour saves. On later turns move in a random direction during compulsory movement; doubles kill the Fanatic (not on its initial release). Contact with obstacles, woods, buildings or another Fanatic kills it; colliding Fanatics both die. Immune to psychology and cannot fight normal melee. Chargers halted by newly released Fanatics may stop or continue through them; other troops cannot voluntarily move through them. Apply Panic from casualties before resuming movement.
+Reference: Orcs &amp; Goblins, printed p. 72–73. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="e4fe-f88f-d71d-394d" name="Squig Hunters and Cave Squigs" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="74, 91">
+      <description>Each purchased Hunter team consists of two Goblins with one prodder. Squigs stand in front of the Hunters. Both Goblins fight through the Squigs with +1 Strength while the pair survives; a lone survivor loses this bonus. Randomise shooting proportionally. One prodder controls up to three Squigs; excess Squigs become wild. Wild Squigs move 2D6 randomly, charge what they contact and ignore psychology and Break tests. Hunters retain normal Goblin Leadership rules.
+Reference: Orcs &amp; Goblins, printed p. 74, 91. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="ce89-0ecd-a0c2-88dc" name="Squig Hoppers" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="75">
+      <description>Choose a direction and bounce 2D6 inches; doubles send the bounce in a random direction. Bounce over intervening troops and terrain. Landing on a model causes the Squig's automatic hits and optional rider attacks without a reply, then another bounce. Landing in water kills it; leaving the table removes it. Immune to psychology and Break tests. If an enemy charges and pins it, resolve ordinary cavalry combat. Its rider has a 6+ shooting save. Use the book for successive bounce placement.
+Reference: Orcs &amp; Goblins, printed p. 75. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="0850-079c-7882-8b00" name="Netters and Clubbers" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="76">
+      <description>Nets strike at +1 Initiative. A successful hit does no damage but prevents the victim attacking if it has not already done so. Clubs strike at +1 Strength; if at least one Clubber fights, add hits equal to the number of netted opponents. With no Clubber present, Netters hit at S3 instead. Release netted victims at the end of the phase. Allocate shooting proportionally between Netters and Clubbers.
+Reference: Orcs &amp; Goblins, printed p. 76. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="504c-57be-25b3-fa40" name="Troll regeneration and vomit" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="81">
+      <description>Cause fear and suffer stupidity. Regenerate wounds on 4+ after both sides strike but before calculating combat results; fire prevents regeneration. Instead of its ordinary attacks a Troll may vomit once: one automatic S5 hit allowing no armour save.
+Reference: Orcs &amp; Goblins, printed p. 81. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="3f95-95de-0411-2f32" name="Stone Troll" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="81">
+      <description>Natural dispel of 4+ against spells, including friendly ones. If this fails a normal counter-magic attempt may follow, as specifically allowed by this rule.
+Reference: Orcs &amp; Goblins, printed p. 81. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="5068-2068-881f-0fac" name="River Troll" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="81">
+      <description>Enemies suffer -1 to hit it in melee; this cannot make a hit require worse than a 6. Shooting is unaffected.
+Reference: Orcs &amp; Goblins, printed p. 81. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="6346-6b96-7f7a-f3f4" name="Snotling mimicry" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="78">
+      <description>Each base has three wounds. Within 12 inches of an Orc/Goblin mob, imitate the nearest mob's charging, fighting, fleeing and frenzy. While in range ignore psychology and Break tests except for this mimicry. If out of range move back into range when possible; otherwise halt, or flee if charged. Characters cannot lead Snotlings.
+Reference: Orcs &amp; Goblins, printed p. 78. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="cc5d-49c8-a6f7-07a3" name="Waaagh magic" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17">
+      <description>A Shaman can cast only within 12 inches of a non-fleeing mob of at least ten Orcs or twenty Goblins. After dealing magic cards each magic phase, roll D6 plus magic level for Orc Shamans (Goblin Shamans add no level). The score must exceed the number of qualifying mobs; a mob in melee counts twice. Failure uses the Eadbanger table. Out of range the test is automatically passed but the Shaman cannot cast. Table: 1 discard a chosen magic card; 2 discard a random card; 3 no spells/bound spells, counter-magic still allowed; 4 also forget a random spell; 5 unconscious until next own magic phase, and touching greenskins pass Toughness tests or die; 6 Shaman dies and touching greenskins test Toughness or die. Apply the racial modifiers below.
+Reference: Magic, printed p. 17. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="5504-9ff4-dd9c-2e2a" name="Orc Shaman" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17–18">
+      <description>Use the normal Orc Waaagh roll, adding magic level.
+Reference: Magic, printed p. 17–18. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="cb8a-eb82-8a75-8e33" name="Goblin Shaman" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17–18">
+      <description>Use the Goblin Waaagh roll without adding magic level.
+Reference: Magic, printed p. 17–18. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="6c78-b6dc-ae53-737f" name="Savage Orc Shaman" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17–18">
+      <description>While with a Savage Orc mob, generate one extra magic card in your own magic phase and improve both the mob's and Shaman's tattoo save to 5+.
+Reference: Magic, printed p. 17–18. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="2308-29f2-372f-9aba" name="Night Goblin Shaman" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17–18">
+      <description>May eat mushrooms at the beginning of his magic phase for D6 extra cards, even if out of casting range. If subsequently in range and failing the Waaagh test, add one to the Eadbanger roll.
+Reference: Magic, printed p. 17–18. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="0bff-3a8b-6210-9f9d" name="Forest Goblin Shaman" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="17–18">
+      <description>Always add one to Eadbanger rolls, but a result of 6 has no effect. After failing a Waaagh test, stagger D6 inches in a random direction.
+Reference: Magic, printed p. 17–18. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="6bed-9f0f-b4b6-2a31" name="Snotling Pump Wagon" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="23">
+      <description>Move 2D6 inches in a chosen direction as compulsory movement; contact counts as a charge. Inflicts 2D6 S7 impacts. Randomise shooting: 1–2 crew, 3–6 wagon; melee: 1–2 wagon, 3–6 crew. Difficult terrain inflicts D6 S6 hits. Collision with friends causes normal combat. Remove if all crew die. Its Snotlings do not use mimicry.
+Reference: Orcs &amp; Goblins, printed p. 23. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="5aa3-37c1-4a32-112d" name="Doom Diver Catapult" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="20–22">
+      <description>Guess an aiming point anywhere on the table and place the two-inch round template. Scatter using artillery/scatter dice, then correct D6 inches towards the original point, possibly overshooting. The centre model suffers an S10 hit, D6 wounds, no armour save; other covered models are hit on 4+ at S5 for one wound with normal armour. Move four inches; cannot shoot after moving. Crew loss costs one turn while another Diver arrives. Misfire: 1–2 destroyed; 3–4 miss next turn; 5 bounce D6×10 inches straight ahead, hitting the first target for D6 S5 hits; 6 wild shot lands D6×10 inches in a random direction without correction, using the normal template damage. The bounce stops at blocking terrain.
+Reference: Orcs &amp; Goblins, printed p. 20–22. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="a142-d5ec-f3c6-a7cb" name="Small Rock Lobber" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="24, 93">
+      <description>Guess up to 48 inches. Use the stone-thrower template, artillery/scatter dice and misfire chart. The centre is automatically hit and other covered models on 4+. S7, D3 wounds, no armour saves.
+Reference: Orcs &amp; Goblins, printed p. 24, 93. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="92fa-061a-fdc4-ffd2" name="Big Rock Lobber" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="24, 93">
+      <description>Guess up to 60 inches. Use the stone-thrower template, artillery/scatter dice and misfire chart. The centre is automatically hit and other covered models on 4+. S10, D6 wounds, no armour saves.
+Reference: Orcs &amp; Goblins, printed p. 24, 93. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="0c12-4ca3-e357-1738" name="Bolt Thrower" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="24, 93">
+      <description>Range 48 inches. Roll to hit with crew BS. The first hit is S5, D4 wounds, no armour save. If the target dies, continue to the next rank at one less Strength; stop at the first survivor or after the last rank.
+Reference: Orcs &amp; Goblins, printed p. 24, 93. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="4c5e-dcb5-bc8a-3ef8" name="War machine crews" hidden="false" publicationId="d7c9-7773-4408-58f6" page="78–83">
+      <description>Same-type machines deployed within five inches form a battery and must remain within five inches of another machine in it. Batteries share Leadership tests; excess wounds never carry between machines. Characters may join but cannot operate a machine, and batteries have no champions. Shooting is normally +1 to hit for a large target; randomise hits 1–4 machine, 5–6 crew. Template weapons hit the components actually covered. Crew can hold or flee a charge, never stand and shoot with the machine. In melee reposition crew within their normal Move to defend the battery; attacks on a machine hit automatically (WS0). Fleeing crew abandon their machines. Apply the book's re-crewing and individual-machine firing rules.
+Reference: Rulebook, printed p. 78–83. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="54b1-d507-2f99-8490" name="Giant attacks — source check required" hidden="false" publicationId="b4e3-1e3f-4601-d0dd" page="92">
+      <description>Use the printed Giant profile, 200-point cost and terror rule. The army-list entry refers to the Warhammer bestiary for the Giant's special attack procedures. Those attack tables have not been verified in the supplied fifth-edition core bestiary and are not reproduced here; agree the applicable fifth-edition Giant rules before fielding it.
+Reference: Orcs &amp; Goblins, printed p. 92. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="00e8-7747-57bc-56d8" name="Giant Scorpion" hidden="false" publicationId="7bde-49a8-e4f5-1832" page="128">
+      <description>Causes fear and has 4+ armour. Two pincer attacks: if both hit the same victim, resolve both at double normal Strength (S10); otherwise resolve a hit at S5. An unridden Scorpion uses the Bound Monster rule.
+Reference: Battle Book, printed p. 128. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="7559-c6f0-be95-3cd1" name="Gigantic Spider" hidden="false" publicationId="7bde-49a8-e4f5-1832" page="129">
+      <description>Causes fear and has 4+ armour. Crosses difficult ground and obstacles without movement penalties. An unridden Spider uses the Bound Monster rule.
+Reference: Battle Book, printed p. 129. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="5539-dd46-69bd-3a69" name="Chimera" hidden="false" publicationId="7bde-49a8-e4f5-1832" page="123">
+      <description>Flies up to 24 inches and causes terror. Its dragon head breathes fire in the shooting phase using the flame template: covered models are hit on 4+, at S4. An unridden Chimera uses the Bound Monster rule.
+Reference: Battle Book, printed p. 123. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="944d-3a62-5fe9-e785" name="Cockatrice" hidden="false" publicationId="7bde-49a8-e4f5-1832" page="123">
+      <description>Flies up to 24 inches and causes fear. In the shooting phase its petrifying gaze targets one visible model within eight inches: that model must roll below Initiative on D6 or turn to stone; a 6 always fails. An unridden Cockatrice uses the Bound Monster rule.
+Reference: Battle Book, printed p. 123. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="db91-78b7-aebc-5739" name="Hydra" hidden="false" publicationId="7bde-49a8-e4f5-1832" page="133">
+      <description>Causes terror. Its heads breathe together, using one flame template in the shooting phase: covered models are hit on 4+, at S4. Its 5+ armour save is unaffected by Strength but is negated by attacks that prohibit saves altogether. An unridden Hydra uses the Bound Monster rule.
+Reference: Battle Book, printed p. 133. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="1014-d8b6-383b-9b68" name="Short bow" hidden="false" publicationId="d7c9-7773-4408-58f6" page="56">
+      <description>Range 16 inches, Strength 3. Use the normal bow shooting procedure.
+Reference: Rulebook, printed p. 56. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
+    <rule id="ca40-fd5d-4a31-e458" name="Crossbow" hidden="false" publicationId="d7c9-7773-4408-58f6" page="56">
+      <description>Range 30 inches, Strength 4. Cannot shoot in a turn in which the model moves.
+Reference: Rulebook, printed p. 56. Rules summary; consult the source for diagrams and edge cases.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry id="fa82-269e-6021-0593" name="Sword of Defiance" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="33">
@@ -764,7 +1033,7 @@ Reference: Rulebook, printed p. 87. Rules summary; consult the source for diagra
         <profile id="fcb7-0d35-0732-3be5" name="Venom Sword" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
           <characteristics>
             <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
-            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Each unsaved wound becomes D6 wounds. Unavailable to Orcs and Goblins.</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Each unsaved wound becomes D6 wounds.</characteristic>
             <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34.</characteristic>
             <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
           </characteristics>
@@ -940,7 +1209,7 @@ Reference: Rulebook, printed p. 87. Rules summary; consult the source for diagra
         <profile id="7b15-e7da-5815-cdb1" name="Gromril Blade" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
           <characteristics>
             <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
-            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Ordinary armour cannot save; magic armour may save.</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Ordinary armour cannot save; magic armour may save. Unavailable to Orcs and Goblins.</characteristic>
             <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34.</characteristic>
             <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
           </characteristics>
@@ -1876,7 +2145,7 @@ Reference: Rulebook, printed p. 87. Rules summary; consult the source for diagra
           <characteristics>
             <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic armour</characteristic>
             <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Armour save 3+ against shooting and 5+ in close combat. Cannot combine with body armour, but can combine with a shield. The paint itself does not prevent a wizard casting spells.</characteristic>
-            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic armour. See Warhammer Magic, p. 36. May not be combined with body armour. Wizards retain spellcasting. Restricted to Wood Elves.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic armour. See Warhammer Magic, p. 36. May not be combined with body armour. Wizards retain spellcasting.</characteristic>
             <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
           </characteristics>
         </profile>
@@ -3432,10 +3701,695 @@ Reference: Rulebook, printed p. 87. Rules summary; consult the source for diagra
         <infoLink id="e405-ca95-0ab6-3266" name="Bound spells" targetId="2c43-b76b-b622-a307" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="13, 44" />
       </infoLinks>
     </selectionEntry>
+    <selectionEntry id="03b2-ef9a-09d7-8b8a" name="Black Axe of Krell" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="33">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="125" />
+      </costs>
+      <constraints>
+        <constraint id="e780-d3f1-abd2-0296" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="fc32-fe42-b317-178f" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="4a7b-9185-597d-9db1" name="Black Axe of Krell" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="33">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">No armour saves. At the start of each magic phase roll for each surviving model wounded by this axe: on 1–2 it suffers another wound.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 33. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="05b0-b26f-114a-983f" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5952-04a0-643d-661f" name="Blade of Cocacila" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="33">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="125" />
+      </costs>
+      <constraints>
+        <constraint id="da51-13c9-b723-7dcc" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="3104-5994-44be-47da" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="6361-9250-b1ba-bb5e" name="Blade of Cocacila" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="33">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Enemies touching the bearer cannot cast spells and their magic items are inactive. A wounded wizard permanently loses his magic powers. Each wound inflicted on an enemy character destroys one of its magic items.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 33. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="3c6c-944f-76e7-c32c" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="51d6-b58e-f650-f246" name="Morgor the Mangler" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="33">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="125" />
+      </costs>
+      <constraints>
+        <constraint id="d68c-c37e-d575-3967" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="1db9-0d03-a430-6507" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="ef84-3e17-abbe-d658" name="Morgor the Mangler" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="33">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Bearer gains +1 WS, Toughness and Strength and strikes first. Ties for first strike use Initiative, then a roll-off. No mundane armour saves against its hits; magic armour can save.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 33. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="97d0-3bb0-8ff2-217a" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="20cc-d0e3-9415-dce8" name="Chaos Tomb Blade" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="33">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="75" />
+      </costs>
+      <constraints>
+        <constraint id="9b5a-08ed-a7c9-9c16" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e0f2-dc08-5ea9-897c" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="86c9-f524-3427-9816" name="Chaos Tomb Blade" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="33">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Each wound inflicted on a living opponent earns a Winds of Magic card in the next magic phase.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 33. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="48ba-e04e-6e3a-64cd" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="b1b7-ae87-2523-ae49" name="Chaos Runesword of Grungni Ironheart" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="34">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="65" />
+      </costs>
+      <constraints>
+        <constraint id="d98b-22f7-4897-249b" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="3239-b2cb-48cf-3a5e" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="f99f-f436-a6cd-4214" name="Chaos Runesword of Grungni Ironheart" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Bearer gains +1 Weapon Skill, Strength and Attacks.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d628-7135-fad3-b4d1" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5c38-d199-d8c9-6678" name="Elf-biter, Axe of Grom" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="34">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="f40d-7cc3-e3a3-efec" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="701b-7380-8308-ecae" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="531f-15bb-875b-b2ea" name="Elf-biter, Axe of Grom" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Each wound causes two wounds. No armour saves allowed.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="081f-a7df-33ef-9142" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="d740-a856-3eb0-6522" name="Dagger of Sotek" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="34">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="c442-ea58-a2e7-b4b4" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="a7c9-5488-2084-7b2e" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="b84a-587b-ff3d-813f" name="Dagger of Sotek" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Adds +1 Strength. A wounded Skaven unit loses its rank-derived bonus when working out combat results. The Magic p. 34 text calls this its Leadership bonus; the summary table on p. 72 clarifies the rear-rank combat bonus. Check the original card if this interaction is disputed.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="dd26-856c-f40e-b4ba" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="45d1-7cc7-17c7-75e7" name="The Sword Skabskrath" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="34">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="52ff-2c34-f6ab-e051" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="9202-cbc8-ae47-42b1" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="19ae-6b83-ddd0-1aed" name="The Sword Skabskrath" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">The bearer causes terror.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="e056-a4df-a60c-4f34" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8a1d-6435-aea2-68d2" name="The Tomb Blade of Arkhan" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="34">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="0c29-fbe2-8ed6-fb13" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e01c-5cb1-e260-b7a2" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="34c0-0231-74d6-f16e" name="The Tomb Blade of Arkhan" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="34">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">A slain enemy with one Wound becomes a Skeleton under the bearer's control.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 34. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="bf81-9c62-00fb-4e48" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5bd1-e805-e654-6a5f" name="Sword of Bork" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="35">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="10" />
+      </costs>
+      <constraints>
+        <constraint id="5617-9f5e-2fe1-e056" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="95da-93ba-fbfa-b5a5" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="598e-5a8a-1fa5-8e6f" name="Sword of Bork" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="35">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">The bearer's unit ignores its first failed animosity test.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic weapon. See Warhammer Magic, p. 35. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b2cf-18bf-af3f-d254" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="7172-f163-54b8-ed7f" name="Bird of Chotek" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="38">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="75" />
+      </costs>
+      <constraints>
+        <constraint id="96b3-f915-cdf9-34a6" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="b8d7-d3aa-c09d-7c1e" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="9501-0a38-66a0-de80" name="Bird of Chotek" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="38">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use at the beginning of your turn: all models flying high must land. Each rider and monster suffers D3 wounds.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 38. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="3f85-c061-bdc8-2413" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6118-93ed-59c7-e79d" name="Collar of Zorga" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="38">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="bbc1-4b28-5c3d-71ad" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="d8c0-e643-c232-43f2" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="3ce8-54f7-5d16-62e5" name="Collar of Zorga" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="38">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Monsters will not attack the bearer in melee. After the bearer's side wins a round, the bearer may test Leadership on 2D6 to take control of a touching enemy monster. On success it immediately moves and fights an extra round, then returns to its owner. It cannot attack its rider. Orcs &amp; Goblins p. 101 supplies the victory condition and rider detail omitted from the Magic summary.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 38. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4ea4-132e-30cf-5eab" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="4b21-b55e-ee70-0ace" name="The Carstein Ring" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="39">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="21d3-cf06-e11f-a0f3" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="0984-779e-6aef-c506" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="f59f-7544-6dc4-92ef" name="The Carstein Ring" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="39">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use: when killed, the Vampire returns at full Wounds with his items and spells, even after an outright kill. Vampire Counts p. 27 restricts this ring to a Von Carstein Vampire with Pure Blood.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 39. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="77fb-f247-8c62-6eae" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="c154-caf0-19bc-72ed" name="Cloak of Feathers" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="39">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="2f54-61e9-aff0-bdaa" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="65e6-06c1-2ed6-1ca7" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="4e04-763c-498e-eab5" name="Cloak of Feathers" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="39">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">A Saurus or Skink Hero already in melee may move up to 24 inches away before blows or after making his attacks. This move cannot enter another combat.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 39. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="12e3-c7b6-8cd4-7d2e" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="11a1-ca99-ae31-ca61" name="Cursed Book" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="39">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="4574-2222-4ac4-a15c" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="fb1d-5c16-822c-01b4" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="f1d9-2cf9-3bbb-4cac" name="Cursed Book" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="39">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Living models within six inches suffer -1 to hit in melee and shooting.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 39. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="cfe0-e8d0-a0c5-1fd6" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8bf5-8ebb-de8f-44c6" name="Mad Cap Mushrooms" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="39">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="c207-32c6-f3bc-67ce" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="fff1-36d7-3749-1952" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="ec74-0555-c48f-8db4" name="Mad Cap Mushrooms" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="39">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use: one Fanatic released by the bearer's unit causes an extra D6 hits against the first unit it hits (2D6 S5 hits total).</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Enchanted item. See Warhammer Magic, p. 39. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d39c-6427-03af-7b4d" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="0997-b5f5-b6cf-af01" name="Book of Nagash" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="40">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="100" />
+      </costs>
+      <constraints>
+        <constraint id="03f3-5f2f-c806-fb03" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="8f48-bdc8-dea5-ec4c" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="f993-b77b-7bf9-e64f" name="Book of Nagash" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="40">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">A Necromancer using Necromantic Magic gains one magic level.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 40. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8f1f-bbb1-7882-acd1" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e141-e7f2-649e-c37e" name="Talon of Death" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="40">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="100" />
+      </costs>
+      <constraints>
+        <constraint id="a93d-9235-b738-fab7" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e55d-9672-cb32-7693" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="8997-662d-91f3-69d1" name="Talon of Death" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="40">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">At the start of each close combat phase each living enemy touching the bearer suffers one wound, with no armour save. Does not affect Daemons or Undead.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 40. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="dec1-2c2b-e0e6-a7d6" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="eac2-37dc-b9de-4975" name="Sword of Unholy Power" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="40">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="75" />
+      </costs>
+      <constraints>
+        <constraint id="688c-daa9-3661-7e0e" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e7f4-01ae-fb48-c502" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="a98b-a74d-6372-9a94" name="Sword of Unholy Power" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="40">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">A wizard using Dark or Necromantic Magic may cast a spell without Power cards. Afterwards roll D6: if no greater than that spell's Power, the item is exhausted. Cannot be combined with another magic weapon. The summary appears in both the weapon and arcana sections; listed here as arcana with a weapon exclusion.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 40. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="43d3-0f72-941e-62fc" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="d2f2-5d33-5a7d-d0cf" name="Bane Head" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="40">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="a6f0-b76e-ad75-84af" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="1f73-e93d-649b-3277" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="a099-a05f-13c1-804f" name="Bane Head" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="40">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">At the start nominate an enemy character. On 5+ the bane succeeds and all wounds suffered by that character are doubled.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 40. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c02f-89da-31d1-4415" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="977e-b534-bbcb-dde3" name="Plaque of Dominion" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="41">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="82fc-bca8-9d65-c893" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="5852-b959-5e23-4bfd" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="1727-6b55-23ae-de72" name="Plaque of Dominion" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="41">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Bound spell: in the bearer's magic phase all Lizardmen strike first in melee for one turn.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 41. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="6eb5-492a-3dd3-7b5e" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+        <infoLink id="11c2-8a33-0860-ad97" name="Bound spells" targetId="2c43-b76b-b622-a307" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="13, 44" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8c89-bd8c-874d-f656" name="Staff of Damnation" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="41">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="3c93-8b7f-1ad0-b2a8" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="22b8-bb78-a563-95da" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="2823-c683-4494-92af" name="Staff of Damnation" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="41">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Bound spell: friendly Skeletons, Zombies, Mummies, Wights, Wraiths and Skeleton Horsemen within 36 inches may take an extra action: charge, march, fight a round or shoot. After use it is exhausted on 1–2.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 41. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="cbca-21ff-ae98-057d" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+        <infoLink id="7b65-fd77-8e5b-c6aa" name="Bound spells" targetId="2c43-b76b-b622-a307" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="13, 44" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5c14-cea4-c5d7-91ec" name="Amulet of Xapati" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="42">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="3481-5edd-ed5c-e8bd" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="0ebd-0726-9eab-dcaa" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="974a-0a02-3b47-3dc0" name="Amulet of Xapati" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="42">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Dispel a spell aimed at the bearer or his unit on 3+. If successful the bearer may cast one of his spells without Power, with Power no greater than the dispelled spell; then end the magic phase.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Wizard arcana. See Warhammer Magic, p. 42. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="27cc-393c-e371-2dea" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="993f-a1cd-7110-64c6" name="Hell Banner" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="42">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="75" />
+      </costs>
+      <constraints>
+        <constraint id="3ea3-1067-a1ec-7345" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="4ed5-be25-cf8f-f882" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="b0f1-ac9d-d078-0b0a" name="Hell Banner" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="42">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Enemies within six inches suffer -2 on Leadership tests.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 42. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="28e7-7ee3-a99f-3927" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="46b5-f3d8-0052-3571" name="Mork’s War Banner" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="65" />
+      </costs>
+      <constraints>
+        <constraint id="e99a-a49a-892f-c838" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="8b30-b64f-03b9-9e77" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="4b86-fc71-517f-7825" name="Mork’s War Banner" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Spells aimed at this unit are dispelled on 4+. A wizard touching the unit is slain, with no armour save.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="27ac-d17a-742e-6548" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="eb23-fa14-31df-36d3" name="Banner of Doom" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="50" />
+      </costs>
+      <constraints>
+        <constraint id="d0c7-d891-6efc-ae93" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="a40e-6077-7113-2ee7" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="daf3-06d1-3160-7141" name="Banner of Doom" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Enemies within six inches suffer -1 Leadership.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Vampire Counts.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="34ff-95b9-ff91-0702" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="84c1-b7e8-0069-020f" name="Bad Moon Banner" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="35" />
+      </costs>
+      <constraints>
+        <constraint id="9281-0e5b-e39d-26ad" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="bd71-8cff-3e2b-b1ee" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="2de0-9092-da72-7a4c" name="Bad Moon Banner" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Enemies suffer -1 to hit the unit with shooting; the unit always strikes first in melee.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="02b8-72c6-c361-8a74" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="3afc-64d6-a102-2c84" name="Spider Banner" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="35" />
+      </costs>
+      <constraints>
+        <constraint id="fc73-e344-7037-bf3c" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="efd2-b009-fd23-55cf" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="2f05-8b1d-dee4-cae9" name="Spider Banner" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use in the first round of combat: double the unit's Attacks, including characters.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5f33-2096-2173-06b5" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="9f7d-e19c-67ec-949d" name="Gork’s War Banner" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="c417-52d2-b702-7824" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e435-638f-a5b7-6fb7" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="c023-e129-5a84-1090" name="Gork’s War Banner" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">The unit gains +1 Strength when charging.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="c5ab-d9c4-0ffa-e886" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="31ad-3493-3033-d2f6" name="Jaguar Standard" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="43">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="25" />
+      </costs>
+      <constraints>
+        <constraint id="4436-ac17-6f2b-8295" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="ded5-893f-91de-da74" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="bf53-8773-73f2-b31e" name="Jaguar Standard" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="43">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Add D6 inches to the unit's movement for a turn. May be used three times.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Magic standard. See Warhammer Magic, p. 43. Restricted to Lizardmen.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="be54-9d31-d55e-749c" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="2d87-b4fb-dee1-33fc" name="Skarsnik’s Prodder" type="upgrade" hidden="false" collective="false" import="true" publicationId="7f78-0cdc-b6a0-484e" page="44">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="75" />
+      </costs>
+      <constraints>
+        <constraint id="b20d-4cf0-4b0c-1c5f" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e78f-c5e6-7129-1852" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <profiles>
+        <profile id="4d9c-1076-3ee4-8591" name="Skarsnik’s Prodder" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="44">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Bound spell</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Fires a 24-inch line-of-sight S4 blast, with no armour saves, at the first model in its path. One blast per qualifying mob within 12 inches (at least ten Orcs or twenty Goblins), with another blast for each such mob in combat. Also gives +1 Strength in melee (Orcs &amp; Goblins p. 101).</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Bound spell. See Warhammer Magic, p. 44. Restricted to Orcs &amp; Goblins.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">summary verified</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="a57d-fdc0-985f-c701" name="Magic-item selection and use" targetId="0976-a058-afa1-acc2" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="30–32" />
+        <infoLink id="5365-95ac-1c14-8992" name="Bound spells" targetId="2c43-b76b-b622-a307" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="13, 44" />
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <rules>
     <rule id="d8c0-e562-ed50-730c" name="Development release" hidden="false">
-      <description>0.3.0-alpha. Standard armies and shared magic-item selections. Named characters, allies and optional tournament rules are not implemented. See README.md for manual checks and testing status.</description>
+      <description>0.5.0-alpha. Standard armies and shared magic-item selections. Named characters are included for all five armies; allies and optional tournament rules are not implemented. See README.md for manual checks and testing status.</description>
     </rule>
     <rule id="f3ce-3a99-4cc1-bb41" name="Core roster rules" hidden="false">
       <description>Five models minimum per regiment, including command and champion unless its army entry specifies otherwise. Command models replace ordinary troopers. Champions and character mounts use the Characters allowance. Magic-item category limits and uniqueness follow Warhammer Magic pp. 30–31. Spells are allocated at the table; their cards are not purchased individually.</description>

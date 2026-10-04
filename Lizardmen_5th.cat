@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="65b5-c77d-742c-f5f2" name="Lizardmen" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="4" authorName="WHFB5 community starter project">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="65b5-c77d-742c-f5f2" name="Lizardmen" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="5" authorName="WHFB5 community starter project">
   <forceEntries>
     <forceEntry id="5aa1-4335-b31d-80c5" name="Lizardmen Army" hidden="false">
       <categoryLinks>
@@ -80,7 +80,10 @@
       </infoLinks>
       <rules>
         <rule id="729b-7c08-e4d2-202b" name="Development and composition checks" hidden="false">
-          <description>v0.4 alpha. New catalogue selection logic has static tests but has not yet been exercised in New Recruit. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
+          <description>v0.5 alpha. New catalogue selection logic has static tests but has not yet been exercised in New Recruit. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
+        </rule>
+        <rule id="c5f3-7c53-a72d-9158" name="Where to find special characters" hidden="false">
+          <description>Venerable Lord Kroak — Characters; Lotl-Botl — Characters; Kroq — Characters; Oxayotl — Characters; Inxi-Huinzi — Characters; Itzi-Bitzi — Characters; Tenehuini, Prophet of Sotek — Characters; Lord Mazdamundi — Characters.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -2177,6 +2180,7 @@
           </costs>
           <constraints>
             <constraint id="3104-3b93-1d75-c46c" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="aba0-6375-c840-6e8b" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
           </constraints>
           <infoLinks>
             <infoLink id="9789-7eb8-6911-658d" name="Battle Standard" targetId="e82b-0d7a-a594-4ca4" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="88" />
@@ -2219,12 +2223,32 @@
               </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" field="aba0-6375-c840-6e8b" value="0">
+              <conditions>
+                <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint id="027a-cd8a-566d-87a5" type="min" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
         <constraint id="2428-c2d6-815d-b369" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="7788-f56b-de94-81cf" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
       </constraints>
+      <modifiers>
+        <modifier type="set" field="7788-f56b-de94-81cf" value="0">
+          <conditions>
+            <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="027a-cd8a-566d-87a5" value="0">
+          <conditions>
+            <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3538-8668-564c-5bbf" name="Additional Slann Mage-Priest" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="73">
       <categoryLinks>
@@ -2777,6 +2801,11 @@
                     <condition type="atLeast" field="selections" scope="roster" value="1" childId="16c3-f3c0-3647-7910" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
                   </conditions>
                 </modifier>
+                <modifier type="set" field="d887-11c4-8200-469d" value="1">
+                  <conditions>
+                    <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry id="39e6-ccec-de34-0474" name="Mage-Priest Champion and Palanquin" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="73">
@@ -3314,6 +3343,11 @@
                     <condition type="atLeast" field="selections" scope="roster" value="1" childId="16c3-f3c0-3647-7910" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
                   </conditions>
                 </modifier>
+                <modifier type="set" field="21a8-e0dd-1111-dfc8" value="1">
+                  <conditions>
+                    <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry id="0c94-a898-b11f-f9c0" name="Master Mage-Priest and Palanquin" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="73">
@@ -3846,6 +3880,11 @@
                     <condition type="atLeast" field="selections" scope="roster" value="1" childId="16c3-f3c0-3647-7910" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
                   </conditions>
                 </modifier>
+                <modifier type="set" field="5c92-f461-b406-50dc" value="1">
+                  <conditions>
+                    <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry id="ad09-a15b-e465-5cf7" name="Mage-Lord and Palanquin" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="73">
@@ -4373,6 +4412,11 @@
                     <condition type="atLeast" field="selections" scope="roster" value="1" childId="16c3-f3c0-3647-7910" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
                   </conditions>
                 </modifier>
+                <modifier type="set" field="8575-9e73-1834-436d" value="1">
+                  <conditions>
+                    <condition type="atLeast" field="selections" scope="roster" value="1" childId="b9e8-a3ce-c9b0-cf58" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -4882,7 +4926,18 @@
                 <entryLink id="f617-fd42-8f4a-af02" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                 <entryLink id="a120-8b24-7b86-e687" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                 <entryLink id="5e6d-467c-ee68-e561" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                <entryLink id="ebf4-713c-5807-5dc4" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                <entryLink id="ebf4-713c-5807-5dc4" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint id="3fe6-5d2d-1f74-cf11" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" field="3fe6-5d2d-1f74-cf11" value="0">
+                      <conditions>
+                        <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <modifiers>
                 <modifier type="set" field="2e5a-37ac-bc39-ca03" value="0">
@@ -5456,7 +5511,18 @@
                 <entryLink id="ca93-ae0f-d8da-39f0" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                 <entryLink id="b176-13c4-465b-2042" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                 <entryLink id="21de-30b2-bcc8-346d" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                <entryLink id="b0b0-2180-8677-ac56" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                <entryLink id="b0b0-2180-8677-ac56" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint id="52ef-ee2c-ef97-159f" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" field="52ef-ee2c-ef97-159f" value="0">
+                      <conditions>
+                        <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <modifiers>
                 <modifier type="set" field="a7b1-1af2-9dfa-b262" value="0">
@@ -6674,7 +6740,18 @@
                         <entryLink id="4d34-ec67-cea5-ae35" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="1c3c-487e-fcd3-69e6" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="df8a-f361-efae-dda0" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                        <entryLink id="dbe0-77d6-6469-8a41" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                        <entryLink id="dbe0-77d6-6469-8a41" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint id="a56b-4ec7-b5a0-0768" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" field="a56b-4ec7-b5a0-0768" value="0">
+                              <conditions>
+                                <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
                       </entryLinks>
                       <modifiers>
                         <modifier type="set" field="2bad-039e-0b75-968f" value="0">
@@ -7143,7 +7220,18 @@
                         <entryLink id="3cea-50cd-b1ef-2061" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="0754-25bb-ffe0-14b4" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="a5ea-3772-3f62-8952" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                        <entryLink id="4038-eb29-ec81-d70d" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                        <entryLink id="4038-eb29-ec81-d70d" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint id="6362-d725-093a-f2f9" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" field="6362-d725-093a-f2f9" value="0">
+                              <conditions>
+                                <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
                       </entryLinks>
                       <modifiers>
                         <modifier type="set" field="a0bf-68ca-ad89-611f" value="0">
@@ -7591,7 +7679,18 @@
                         <entryLink id="9d65-0caa-2579-f22f" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="6da6-0efb-bd50-53ce" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="30b6-5ec3-7b0a-e027" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                        <entryLink id="4a49-52c3-f328-3aaf" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                        <entryLink id="4a49-52c3-f328-3aaf" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint id="d253-95e9-4269-75ba" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" field="d253-95e9-4269-75ba" value="0">
+                              <conditions>
+                                <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
                       </entryLinks>
                       <modifiers>
                         <modifier type="set" field="24c1-06d3-efeb-a127" value="0">
@@ -7977,7 +8076,18 @@
                         <entryLink id="f33b-feca-fe33-68fe" name="Languisher Sword" targetId="367e-ee01-f75b-2b5f" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="2c71-b0eb-dac8-bfcd" name="Copper Sigil Sword" targetId="21d8-ceb7-d87e-2173" type="selectionEntry" hidden="false" collective="false" import="true" />
                         <entryLink id="351e-d238-8c5e-feaa" name="Blade of Cocacila" targetId="5952-04a0-643d-661f" type="selectionEntry" hidden="false" collective="false" import="true" />
-                        <entryLink id="05b9-75e9-35f8-9bf9" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true" />
+                        <entryLink id="05b9-75e9-35f8-9bf9" name="Dagger of Sotek" targetId="d740-a856-3eb0-6522" type="selectionEntry" hidden="false" collective="false" import="true">
+                          <constraints>
+                            <constraint id="1fff-2ff0-a77f-cc41" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" field="1fff-2ff0-a77f-cc41" value="0">
+                              <conditions>
+                                <condition type="atLeast" field="selections" scope="roster" value="1" childId="c82c-9b6f-5210-7669" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
                       </entryLinks>
                       <modifiers>
                         <modifier type="set" field="a274-43f4-6907-6405" value="0">
@@ -8679,4 +8789,1075 @@
       </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
+  <sharedSelectionEntries>
+    <selectionEntry id="5b7c-1b30-9c35-a21e" name="Venerable Lord Kroak" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="620" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="c868-8653-b29b-35ef" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="3820-c1bf-21a0-5455" name="Venerable Lord Kroak" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">4</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">6</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">5</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">6</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">5</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">8</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">6</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">8</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="33db-842f-01cb-3f5a" name="Standard of the Sacred Serpent" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Not the army battle standard. Range 8 inches; D6 shots in the shooting phase using Kroak’s BS, each hit Strength 4.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 79–80. Card value 25 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6345-14fe-3b2b-0a4a" name="Gold Death Mask" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Enemy melee attacks hit Kroak only on a 6.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 79–80. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4064-37a1-3b1f-c981" name="Ceremonial Mace of Malachite" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Negates magic weapons used against Kroak in melee. Enemies may instead use ordinary weapons.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 79–80. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d193-96b0-b71e-24fe" name="Amulet of Itza" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Spells against Kroak or his unit are dispelled on 4+. A successful dispel also gives the caster one Strength 4 hit.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 79–80. Card value 25 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5e59-1c30-23a1-283f" name="Glyph of Potec" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Undead in base contact suffer double damage.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 79–80. Card value 20 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="2081-99ee-7bc3-a153" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="4447-810a-a33e-33b3" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="1ece-563e-f902-3b04" name="Special character" hidden="false">
+          <description>Unique named selection. 620 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="52ac-46db-4d7d-f86e" name="Included equipment" hidden="false">
+          <description>Ceremonial Mace of Malachite; palanquin with four bodyguards.</description>
+        </rule>
+        <rule id="555c-3298-a713-5425" name="Relic Priest" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <description>May accompany any army in addition to its living Slann General, regardless of points limit. Cannot be General or cast spells himself. Holds four Battle or High Magic spells. At the start of a Lizardman magic phase each living Slann may swap one spell with Kroak. Reference: Lizardmen, printed p. 79–80.</description>
+        </rule>
+        <rule id="60a1-f00e-88c9-1535" name="Mighty Shield and palanquin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="79–80">
+          <description>The entire model has a 3+ special save against each wound, unaffected by Strength or armour-negating weapons. Kroak and the four bearers share one combined profile; attacks and items affect the whole model. Reference: Lizardmen, printed p. 79–80.</description>
+        </rule>
+        <rule id="7a10-637d-f0eb-8d39" name="Magic and spell allocation" hidden="false">
+          <description>Four reference spells held for telepathic exchange; Kroak cannot cast and is not a living wizard.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="9dfa-8e23-17d4-6244" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="12ab-631a-51ce-cab1" name="Magic phase and Winds of Magic" targetId="51af-8134-e1d0-5c8f" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–12" />
+        <infoLink id="f298-f683-dea9-e689" name="Counter magic and natural dispels" targetId="a2e7-268a-edde-1495" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="10–14" />
+        <infoLink id="4275-8c2d-84f3-5a99" name="Winds of Magic special cards" targetId="0d22-3d38-e047-8557" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–10" />
+        <infoLink id="337c-c00c-2428-6f5a" name="Spells remaining in play" targetId="b403-7328-b3ca-4dd7" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="11–14" />
+        <infoLink id="abeb-64d2-51d6-3b07" name="Spell targets, sight and templates" targetId="34de-d976-f1cf-5402" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="12, 22" />
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="91f6-62d0-3fc4-70e5" name="Magic lore" hidden="false" collective="false" import="true" defaultSelectionEntryId="fbdc-c542-4819-9711">
+          <constraints>
+            <constraint id="9f79-0744-4283-374c" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="989e-efc6-e022-ece7" type="min" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fbdc-c542-4819-9711" name="Battle Magic" type="upgrade" hidden="false" collective="false" import="true">
+              <costs>
+                <cost name="pts" typeId="0044-15f1-782b-00ea" value="0" />
+              </costs>
+              <constraints>
+                <constraint id="2ced-aa79-ff61-b431" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+              </constraints>
+              <profiles>
+                <profile id="9aac-8dd5-cd72-cb72" name="Fireball" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Launch one fireball per magic level. Each strikes the first model in its path for one S4 hit, without armour saves. Line of sight required.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="2caf-607c-486d-992d" name="Destruction" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2+</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit suffers 2D6 S4 hits, without armour saves. The summary prints Power 2+ but does not explain the additional-power procedure; use the spell card for that detail.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="ff83-58d6-b3b3-eca9" name="Fear" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The targeted enemy unit immediately takes a Fear test and flees if it fails.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8946-a867-3853-8c7e" name="Blast" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The first enemy model in the path suffers either D6 S5 hits or D3 S10 hits, with no armour saves. The summary does not reproduce a Line of Sight label; check the original card for its targeting instructions.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="f1ed-27e9-c652-1385" name="Shield" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains a magical shield: before enemy shots roll to hit, roll for each shot; on 4+ it is stopped.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b06f-5a9f-923b-4173" name="Heal" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The wizard or one friendly model within range recovers one lost wound.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0f02-432c-2fe0-db26" name="Hold Fast" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit can do nothing while the spell lasts.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8135-df81-789b-d844" name="Teleport Self" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Self</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Transport the wizard anywhere on the battlefield. Arrival in combat counts as charging.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5a3c-e0b0-32ce-c58b" name="Curse" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit suffers -1 to shooting and close-combat hit rolls.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b5f8-e9a5-6a2e-66a0" name="Net" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit can do nothing while entangled.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="3530-e75f-ed6e-a917" name="Move Unit" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Transport the wizard and a friendly unit up to 18 inches across the battlefield. Moving into combat counts as charging in its first round.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="a0dc-af5c-736a-f80f" name="Bless" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains +1 to shooting and close-combat hit rolls.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="9a67-316e-2b5f-c9c4" name="Protect" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains a 4+ special save against each wound.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="b65c-4c40-6304-9f67" name="High Magic" type="upgrade" hidden="false" collective="false" import="true">
+              <costs>
+                <cost name="pts" typeId="0044-15f1-782b-00ea" value="0" />
+              </costs>
+              <constraints>
+                <constraint id="05ec-84be-e514-b12f" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c2e5-b4f9-3fe6-ff92" name="High Magic: spell draw and superiority" targetId="2ff6-b313-7160-82e9" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="18" />
+              </infoLinks>
+              <profiles>
+                <profile id="3ef8-6912-3994-0adf" name="Coruscation of Finreir" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="23">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Self</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The Mage rises on a pillar, sees across the battlefield and casts spells without range reduction. Only flying models can shoot him or attack him in close combat. He gains a 2+ armour save and may fly 24 inches. If dispelled, he descends safely.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 23</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="fd14-223c-f09e-7deb" name="Deadlock" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="23">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Nullify one enemy-held magic item within range. The Mage may release it and deadlock another as described by the spell.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 23</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8028-03a8-b5ad-bae8" name="Banishment" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="23">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Each Undead or Daemon model within range suffers D6 wounds on 4+. Dark, Necromantic and Chaos spells in play within range are dispelled on 4+. Characters test individually and cannot use Look Out, Sir!</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 23</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="ccf4-19e8-5441-3d15" name="Glamour of Teclis" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="23">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">36 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Each time the targeted unit wishes to move it must pass Leadership. On failure the Mage may move it instead.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 23</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="dd9c-9b59-2ebc-332d" name="Assault of Stone" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Move a hill within range up to D6 inches. Individual models touched must roll below Initiative on D6 or suffer D3 wounds; units suffer 2D6 wounds automatically. No armour saves.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="cceb-638c-fcff-d43c" name="Drain Magic" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Battlefield</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Dispel all current spells, discard both hands of magic cards and end the phase. Each wizard rolls 2D6: on 4+ it loses one magic level; a High Magic Mage loses a level only on 6+. This spell cannot be dispelled.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c3cc-bce1-557b-35aa" name="Apotheosis" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">6 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Return a slain friendly model to life within 6 inches of the Mage, with its items, armour, equipment and ordinary steed, but not a monster mount. The returned model causes Fear.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="825a-ea91-57f0-59ac" name="Fiery Convocation" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit immediately takes 2D6 S4 hits. In every subsequent magic phase it takes 2D6 hits at a Strength one higher than before.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5b05-0170-feef-82ca" name="The Tempest" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">48-inch radius</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Enemy units in range must pass Leadership before moving. Flying is prevented and flyers are grounded. All missile fire suffers -2 to hit. War engines and buildings suffer D6 S7 hits each magic phase it lasts.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="89a7-a268-2b57-5b7f" name="Hand of Glory" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="24">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">High Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12-inch radius</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Friendly units in range automatically pass Leadership tests; fleeing friendly units there rally immediately.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 24</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="bf91-2285-2c33-1153" name="Lotl-Botl" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="82">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="100" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="f5f5-9d3f-016c-d901" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="bb65-7784-81ca-e98d" name="Lotl-Botl" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">4</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">5</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">0</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">5</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">5</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">2</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">3</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">4</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="71ae-15af-ac4d-8558" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="2646-b1d1-c292-d5dd" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="bc5a-5cd5-13f7-0ecb" name="Special character" hidden="false">
+          <description>Unique named selection. 100 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="0e22-d418-9493-ab68" name="Included equipment" hidden="false">
+          <description>Hand weapon; light armour; shield.</description>
+        </rule>
+        <rule id="eed5-9dc2-4685-0dd1" name="Scaly skin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <description>3+ armour save; Strength modifiers cannot worsen it beyond 6+. Reference: Lizardmen, printed p. 82.</description>
+        </rule>
+        <rule id="6ab3-777f-36be-1ac8" name="Cold-Blooded Determination" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <description>A Saurus unit joined by Lotl-Botl gains +1 combat result. Reference: Lizardmen, printed p. 82.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="91f0-1e61-3d89-a109" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="ab57-62e5-72a1-29cc" name="Fear" targetId="7c4f-53c7-b87a-c8ff" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="48–49" />
+        <infoLink id="7684-c043-b0d0-9ce8" name="Hand weapon" targetId="f660-63e8-377a-579c" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="54" />
+        <infoLink id="a66f-a7b0-8b00-3dd0" name="Armour, shield and barding" targetId="1d9b-1051-0031-be6d" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="15, 30, 37" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e233-6dd1-74c8-1e13" name="Kroq" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="82">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="113" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="c387-3acf-503a-c1c2" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="d325-006b-ea2a-ecdd" name="Kroq" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">4</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">5</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">0</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">5</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">5</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">2</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">3</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">4</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="0c08-247f-f13f-7711" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="f62a-f346-35ae-b715" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="013a-c906-e8e5-9706" name="Special character" hidden="false">
+          <description>Unique named selection. 113 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="b9c4-854b-3b4b-9882" name="Included equipment" hidden="false">
+          <description>Hand weapon; shield.</description>
+        </rule>
+        <rule id="ab99-7b6c-f1ad-68b7" name="Bony Plates" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <description>4+ armour save; Strength modifiers cannot worsen it beyond 6+. Re-roll failed armour saves once. Reference: Lizardmen, printed p. 82.</description>
+        </rule>
+        <rule id="f6e2-e2bc-d280-5f2c" name="Massive Jaws" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="82">
+          <description>One of his four attacks is a bite causing D3 wounds with no armour saves. Reference: Lizardmen, printed p. 82.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="5f4b-5b75-478b-b440" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="9a59-6054-d469-ec5b" name="Hand weapon" targetId="f660-63e8-377a-579c" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="54" />
+        <infoLink id="89ef-853d-8d4b-2323" name="Armour, shield and barding" targetId="1d9b-1051-0031-be6d" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="15, 30, 37" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="5b6e-52b7-db41-d9db" name="Oxayotl" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="83">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="102" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="fa85-caed-bc68-46b8" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="3d91-850f-2608-1248" name="Oxayotl" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="83">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">6</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">4</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">5</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">4</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">4</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">3</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">7</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">3</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="5780-83a3-1267-87e4" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="5a5e-fae8-9beb-c06c" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="fbfd-061e-5a20-4889" name="Special character" hidden="false">
+          <description>Unique named selection. 102 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="fd10-650a-e0a3-92dc" name="Included equipment" hidden="false">
+          <description>Hand weapon; poisoned-dart blowpipe.</description>
+        </rule>
+        <rule id="ebad-089f-e9c4-e01d" name="Chameleon Skin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="83">
+          <description>Enemy shooting suffers -2 To Hit. Scaly-skin save 5+, never worse than 6+ from Strength modifiers. Reference: Lizardmen, printed p. 83.</description>
+        </rule>
+        <rule id="2b2e-cc6e-3850-973c" name="Poison Dart Blowpipe" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="83">
+          <description>Range 12 inches, three Strength 5 shots at one target each shooting phase; no long-range penalty. Reference: Lizardmen, printed p. 83.</description>
+        </rule>
+        <rule id="179c-f15d-42e3-770b" name="Amazing Stealth" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="83">
+          <description>Deploy after all other deployment, anywhere more than or equal to 8 inches from enemies. May be in the open or enemy deployment zone. Reference: Lizardmen, printed p. 83.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a064-90d0-5428-a05e" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="a7a7-2196-0022-43e5" name="Hand weapon" targetId="f660-63e8-377a-579c" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="54" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="a9e1-cedd-6c31-532c" name="Inxi-Huinzi" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="85" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="3182-6c24-1b2d-e79f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="6952-1360-64bc-5e76" name="Inxi-Huinzi" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">6</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">4</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">5</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">4</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">3</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">2</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">6</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">3</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7362-c6fd-beed-0d0b" name="Xltzhpctli, Horned One" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">8</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">4</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">0</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">4</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">4</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">1</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">1</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">3</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="bce9-5524-a42d-b102" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="088f-5393-1110-c7a3" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="b764-c9d2-ca47-0dc5" name="Special character" hidden="false">
+          <description>Unique named selection. 85 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="feb4-4b2a-61c5-7367" name="Included equipment" hidden="false">
+          <description>Hand weapon; spear; poisoned darts; light armour; shield; Horned One.</description>
+        </rule>
+        <rule id="1f5c-3eed-0440-78cb" name="Scaly skin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+          <description>2+ armour save; Strength modifiers cannot worsen it beyond 6+. Reference: Lizardmen, printed p. 84–85.</description>
+        </rule>
+        <rule id="96fb-45c4-99ca-1021" name="Hail of Darts" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+          <description>Only when charging or charged: one dart per complete 4 inches of charge distance (16 inches for flyers descending from high). Range 16 inches, no long-range penalty; use BS, poison wounds on 4+. These wounds count toward combat result. No dart shots in the shooting phase or later combat rounds. Reference: Lizardmen, printed p. 84–85.</description>
+        </rule>
+        <rule id="10d1-056e-735f-3297" name="Horned One" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="84–85">
+          <description>Causes fear and is never stupid. A Cold One unit accompanied by Inxi-Huinzi is immune to stupidity. Reference: Lizardmen, printed p. 84–85.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="70cc-c772-8f00-3d2c" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="f499-a433-a0f0-a226" name="Fear" targetId="7c4f-53c7-b87a-c8ff" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="48–49" />
+        <infoLink id="5e75-fb1b-d024-a5c7" name="Hand weapon" targetId="f660-63e8-377a-579c" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="54" />
+        <infoLink id="5e65-b248-56c2-da3d" name="Spear" targetId="a4ca-84b6-8eb8-6311" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="55" />
+        <infoLink id="2a89-918b-3269-28e1" name="Armour, shield and barding" targetId="1d9b-1051-0031-be6d" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="15, 30, 37" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="1fe1-a2fe-05ae-41ad" name="Itzi-Bitzi" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="85">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="105" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="f2bd-6b1e-f301-6bbc" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="8508-1ce1-2cb6-8334" name="Itzi-Bitzi" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="85">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">6</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">4</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">5</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">4</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">3</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">2</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">6</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">3</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="92ef-edd4-e5fe-a9a7" name="Piranha Blade" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="85">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Each wound becomes D3 wounds.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 85. Card value 35 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="9710-ec8f-dd74-8dec" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="e234-1e4b-a1b6-8967" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="69fa-4c6e-e350-9c34" name="Special character" hidden="false">
+          <description>Unique named selection. 105 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="3579-d2b3-2e89-18e3" name="Included equipment" hidden="false">
+          <description>Piranha Blade; light armour; shield.</description>
+        </rule>
+        <rule id="55c9-4c3a-268a-7661" name="Scaly skin" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="85">
+          <description>4+ armour save; Strength modifiers cannot worsen it beyond 6+. Reference: Lizardmen, printed p. 85.</description>
+        </rule>
+        <rule id="4052-8205-532c-5d98" name="Incantation of Xetlipocutzl" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="85">
+          <description>Once per battle at any time in an own turn, all enemies within 8 inches take an immediate Panic test on 3D6, using the highest two dice. Not a spell or magical effect; cannot be countered. Reference: Lizardmen, printed p. 85.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b133-1c50-13f3-b09f" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="3127-a428-10e1-38b1" name="Aquatic" targetId="f575-77e7-1aea-c3ab" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="61–63" />
+        <infoLink id="658d-a8a9-8749-530d" name="Armour, shield and barding" targetId="1d9b-1051-0031-be6d" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="15, 30, 37" />
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="c82c-9b6f-5210-7669" name="Tenehuini, Prophet of Sotek" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="86">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="120" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="92b1-bfe8-0ac7-2bbd" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="dfdf-a323-b402-6064" name="Tenehuini, Prophet of Sotek" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="86">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">6</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">2</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">3</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">3</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">3</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">1</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">5</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">1</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2cb7-8bf4-8ec8-da80" name="Dagger of Sotek" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="86">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Adds +1 Strength. A Skaven unit wounded by the dagger loses its rear-rank combat bonus and rank-derived Leadership bonus for the resulting Break test.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 86. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0143-6cf3-8702-4481" name="Totem of Sotek" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="86">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Not an army battle standard. A purchased Serpent Swarm may deploy within 12 inches of the totem and at least 8 inches from enemies, or arrive at the start of a later own turn within 12 inches, including directly in combat. All Serpent Swarms within 12 inches gain +1 Attack.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 86. Card value 10 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="3097-aa50-bb56-a2f5" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="d3c4-d182-5179-ef39" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="e295-b1db-ae50-2e4e" name="Special character" hidden="false">
+          <description>Unique named selection. 120 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="41b6-552b-0f56-5eda" name="Included equipment" hidden="false">
+          <description>Dagger of Sotek; Totem of Sotek.</description>
+        </rule>
+        <rule id="0b87-1320-64da-bf0d" name="Shield of Sotek" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="86">
+          <description>Special save 4+ after ordinary armour, unaffected by Strength or weapons negating armour. The entry also describes scaly skin with a 6+ floor against Strength modifiers; use the separate 4+ special save as printed. Reference: Lizardmen, printed p. 86.</description>
+        </rule>
+        <rule id="e26c-dd62-7866-720f" name="Magic and spell allocation" hidden="false">
+          <description>Magic level 1; 1 spells. Printed spell count already includes fixed bloodline effects; do not add those bonuses again. The lore profiles are reference decks, not a grant of all spells. Choose/draw the permitted spells before play and record them in roster notes.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="a694-9943-fdc6-94db" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="446d-3ea6-f127-7389" name="Aquatic" targetId="f575-77e7-1aea-c3ab" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="61–63" />
+        <infoLink id="7865-b866-eb61-303a" name="Magic phase and Winds of Magic" targetId="51af-8134-e1d0-5c8f" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–12" />
+        <infoLink id="ca11-ca17-a7f9-a9b1" name="Counter magic and natural dispels" targetId="a2e7-268a-edde-1495" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="10–14" />
+        <infoLink id="d03e-9a0e-d12c-82a9" name="Winds of Magic special cards" targetId="0d22-3d38-e047-8557" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–10" />
+        <infoLink id="c772-29da-f5d9-22b9" name="Spells remaining in play" targetId="b403-7328-b3ca-4dd7" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="11–14" />
+        <infoLink id="7c64-7fab-e79e-0b1d" name="Spell targets, sight and templates" targetId="34de-d976-f1cf-5402" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="12, 22" />
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d813-dd58-db2e-2e07" name="Magic lore" hidden="false" collective="false" import="true" defaultSelectionEntryId="c15d-d098-55bd-f583">
+          <constraints>
+            <constraint id="f353-d07e-609e-64dd" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="17a0-3f06-efab-375b" type="min" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c15d-d098-55bd-f583" name="Battle Magic" type="upgrade" hidden="false" collective="false" import="true">
+              <costs>
+                <cost name="pts" typeId="0044-15f1-782b-00ea" value="0" />
+              </costs>
+              <constraints>
+                <constraint id="cf3b-6aee-9cb3-bccc" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+              </constraints>
+              <profiles>
+                <profile id="11d0-68d3-598e-20c3" name="Fireball" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Launch one fireball per magic level. Each strikes the first model in its path for one S4 hit, without armour saves. Line of sight required.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e515-683d-cf81-d73e" name="Destruction" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2+</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit suffers 2D6 S4 hits, without armour saves. The summary prints Power 2+ but does not explain the additional-power procedure; use the spell card for that detail.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="3cbb-4661-0a02-7326" name="Fear" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The targeted enemy unit immediately takes a Fear test and flees if it fails.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="6841-17d4-6dd0-654b" name="Blast" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="26">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The first enemy model in the path suffers either D6 S5 hits or D3 S10 hits, with no armour saves. The summary does not reproduce a Line of Sight label; check the original card for its targeting instructions.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 26</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="2335-a3ff-834f-11df" name="Shield" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains a magical shield: before enemy shots roll to hit, roll for each shot; on 4+ it is stopped.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="228c-fc82-43a4-0f0d" name="Heal" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">The wizard or one friendly model within range recovers one lost wound.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b735-7ee0-9a04-49e3" name="Hold Fast" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit can do nothing while the spell lasts.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="210c-0513-c754-1a74" name="Teleport Self" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Self</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Transport the wizard anywhere on the battlefield. Arrival in combat counts as charging.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5db0-4df5-0928-6858" name="Curse" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit suffers -1 to shooting and close-combat hit rolls.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="9584-495b-4ec4-eaf3" name="Net" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">12 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">An enemy unit can do nothing while entangled.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0299-9bcc-a6ca-720d" name="Move Unit" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">18 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">Transport the wizard and a friendly unit up to 18 inches across the battlefield. Moving into combat counts as charging in its first round.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8916-fa30-4863-3eb2" name="Bless" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains +1 to shooting and close-combat hit rolls.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="df18-6767-f27f-a4f8" name="Protect" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="27">
+                  <characteristics>
+                    <characteristic name="Lore" typeId="d783-9c87-2677-5247">Battle Magic</characteristic>
+                    <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+                    <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">24 inches</characteristic>
+                    <characteristic name="Effect" typeId="d107-f119-4175-3647">A friendly unit gains a 4+ special save against each wound.</characteristic>
+                    <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Remains in play</characteristic>
+                    <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Warhammer Magic, printed p. 27</characteristic>
+                    <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Reference deck; not automatically known</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="b9e8-a3ce-c9b0-cf58" name="Lord Mazdamundi" type="model" hidden="false" collective="false" import="true" publicationId="7839-e5ae-5fb9-1604" page="87–89">
+      <costs>
+        <cost name="pts" typeId="0044-15f1-782b-00ea" value="900" />
+      </costs>
+      <categoryLinks>
+        <categoryLink id="24db-e049-ef29-5030" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+      <profiles>
+        <profile id="7f5d-b050-2a65-2fc5" name="Lord Mazdamundi" typeId="e25d-f63f-8d67-4bda" typeName="Unit" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="87–89">
+          <characteristics>
+            <characteristic name="M" typeId="df0b-cf43-1955-6845">6</characteristic>
+            <characteristic name="WS" typeId="c83c-b081-d246-d5ef">6</characteristic>
+            <characteristic name="BS" typeId="960a-0c90-a448-96b4">5</characteristic>
+            <characteristic name="S" typeId="639b-d234-7e46-084b">7</characteristic>
+            <characteristic name="T" typeId="6a8e-5ca4-9d4e-d596">6</characteristic>
+            <characteristic name="W" typeId="8a8d-ce29-476c-e0fa">8</characteristic>
+            <characteristic name="I" typeId="946e-86c4-ffce-c3ed">6</characteristic>
+            <characteristic name="A" typeId="4cc5-d3f5-26a7-37c2">8</characteristic>
+            <characteristic name="Ld" typeId="cedc-6339-9f57-49bd">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7223-1111-c0df-fcea" name="Cobra Mace of Mazdamundi" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic weapon</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Before resolving attacks from an enemy magic weapon roll D6 once; on 6 the weapon is destroyed.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 15 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="54db-765b-37a2-615e" name="Plaque of Tepec" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use: automatically dispel a spell aimed at Mazdamundi or his unit. Both players roll D6; if Mazdamundi wins, also destroy that spell.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7079-3498-3ac4-7149" name="Plaque of Xoloc" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use: power one spell from Mazdamundi or another Slann for free with Total Power. Then every wizard on the battlefield rolls D6, suffering one wound on 1.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8f62-9619-5ca3-31ba" name="Itxi Grubs" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Wizard arcana</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use at the start of an own magic phase: gain D6 Winds of Magic cards.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5f0a-9ab7-d616-1b27" name="Egg of the Quango" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Enchanted item</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">One use in melee: gain D3 extra attacks.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 10 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8f21-d624-6587-27e2" name="Sunburst Standard of Hexoatl" typeId="b93a-4f1c-9871-3028" typeName="Magic item" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="89">
+          <characteristics>
+            <characteristic name="Type" typeId="7ef9-9797-693d-d937">Magic standard</characteristic>
+            <characteristic name="Effect" typeId="d277-fc43-48d0-6dce">Army battle standard. Models flying high cannot charge Mazdamundi or his unit; they must first land.</characteristic>
+            <characteristic name="Reference" typeId="2fa3-15cf-fc7d-e42b">Lizardmen, printed p. 89. Card value 50 points, included in the character total.</characteristic>
+            <characteristic name="Coverage" typeId="23f7-abf1-238e-1daa">Book-checked summary; fixed loadout</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="58cd-0fb6-55fb-1ee1" name="Move the Mountains" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="88">
+          <characteristics>
+            <characteristic name="Lore" typeId="d783-9c87-2677-5247">Lord Mazdamundi — unique spell</characteristic>
+            <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">2</characteristic>
+            <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Any hill</characteristic>
+            <characteristic name="Effect" typeId="d107-f119-4175-3647">A hill shakes until the next Lizardman magic phase. Troops on it cannot move, shoot, cast spells or fight.</characteristic>
+            <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+            <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Lizardmen, printed p. 88</characteristic>
+            <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Included unique spell</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1dac-f503-bcb7-17bc" name="Ruination of Cities" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="88">
+          <characteristics>
+            <characteristic name="Lore" typeId="d783-9c87-2677-5247">Lord Mazdamundi — unique spell</characteristic>
+            <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+            <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Any one qualifying terrain feature</characteristic>
+            <characteristic name="Effect" typeId="d107-f119-4175-3647">Collapse a building/group of buildings forming one terrain feature, wall or bridge into very difficult rubble. For each occupying model roll 2D6: above Toughness removes it. Units losing 25% test Panic.</characteristic>
+            <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+            <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Lizardmen, printed p. 88</characteristic>
+            <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Included unique spell</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8f25-c2b7-26b5-6846" name="Earth Line" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="88">
+          <characteristics>
+            <characteristic name="Lore" typeId="d783-9c87-2677-5247">Lord Mazdamundi — unique spell</characteristic>
+            <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">3</characteristic>
+            <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Line to one chosen table corner</characteristic>
+            <characteristic name="Effect" typeId="d107-f119-4175-3647">Draw a line from Mazdamundi to a chosen corner. For each model crossed, 2D6 above Toughness causes one wound with no save. Units losing 25% test Panic.</characteristic>
+            <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+            <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Lizardmen, printed p. 88</characteristic>
+            <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Included unique spell</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="da35-3438-3768-04b2" name="Part the Waters" typeId="9449-4f21-0583-ddfa" typeName="Spell" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="88">
+          <characteristics>
+            <characteristic name="Lore" typeId="d783-9c87-2677-5247">Lord Mazdamundi — unique spell</characteristic>
+            <characteristic name="Power" typeId="4906-4226-3bc0-8c0f">1</characteristic>
+            <characteristic name="Range" typeId="6f86-de4c-df8c-d65e">Any water feature</characteristic>
+            <characteristic name="Effect" typeId="d107-f119-4175-3647">Create a dry causeway wide enough for four Saurus, a Stegadon or palanquin, with unlimited length. Lasts all battle and cannot be dispelled.</characteristic>
+            <characteristic name="Duration" typeId="bcd5-9122-20dc-efc3">Resolve as described</characteristic>
+            <characteristic name="Reference" typeId="3d00-247e-9cd5-be21">Lizardmen, printed p. 88</characteristic>
+            <characteristic name="Coverage" typeId="a8d4-be7a-bb66-130e">Included unique spell</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint id="201e-eb2f-a8f3-8064" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="ced2-62a1-045a-8b69" type="max" value="1" scope="roster" field="selections" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" />
+        <constraint id="46ca-b687-6a41-f4ab" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+        <constraint id="fb4b-3abf-4414-2dd0" type="max" value="1" scope="parent" field="selections" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" />
+      </constraints>
+      <rules>
+        <rule id="9193-7070-088d-490a" name="Special character" hidden="false">
+          <description>Unique named selection. 900 points includes the complete listed fixed equipment, companions, powers and mounts; only separately offered options add points. Printed profiles are before magic-item bonuses unless a rule says they are already included. Special-character use requires the players’ agreement under the books’ convention.</description>
+        </rule>
+        <rule id="8f2a-9347-9bb6-c735" name="Included equipment" hidden="false">
+          <description>Cobra Mace; palanquin on Stegadon.</description>
+        </rule>
+        <rule id="ed9c-1a5a-4921-e580" name="Slann telepathy" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="87–89">
+          <description>At each Lizardman magic phase start, may borrow one spell from another Slann. Return it after its effect ends, it is dispelled, or if unused that turn. May hold only one borrowed spell at a time. Reference: Lizardmen, printed p. 87–89.</description>
+        </rule>
+        <rule id="9c4a-b3f2-970a-63cc" name="Stegadon and Shield of the Old Ones" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="87–89">
+          <description>One combined profile for Mazdamundi, palanquin and Stegadon. Special save 4+ against each wound. Charging causes D6 automatic Strength 5 impact hits, resolved first. For each incoming hit, roll D6: on 1 it strikes the bony shield and is ignored. Reference: Lizardmen, printed p. 87–89.</description>
+        </rule>
+        <rule id="4f2b-4722-ba99-948f" name="Magic and spell allocation" hidden="false">
+          <description>Magic level 4; 4 spells. Printed spell count already includes fixed bloodline effects; do not add those bonuses again. Uses the four unique spells printed below.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="5775-6021-b3ea-acf6" name="Cold-blooded" targetId="bd8e-b04d-8ac4-5a7c" type="rule" hidden="false" publicationId="7839-e5ae-5fb9-1604" page="59, 73" />
+        <infoLink id="c72c-12d0-09eb-4262" name="Fear" targetId="7c4f-53c7-b87a-c8ff" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="48–49" />
+        <infoLink id="67a5-50df-fd02-5be4" name="General" targetId="d1ba-1b25-c83e-0e46" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="88" />
+        <infoLink id="9cb6-0753-eece-1d2b" name="Battle Standard" targetId="e82b-0d7a-a594-4ca4" type="rule" hidden="false" publicationId="d7c9-7773-4408-58f6" page="88" />
+        <infoLink id="0c95-0e50-ad28-5817" name="Magic phase and Winds of Magic" targetId="51af-8134-e1d0-5c8f" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–12" />
+        <infoLink id="0929-4878-7df9-7457" name="Counter magic and natural dispels" targetId="a2e7-268a-edde-1495" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="10–14" />
+        <infoLink id="6788-c19d-73bb-d94a" name="Winds of Magic special cards" targetId="0d22-3d38-e047-8557" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="9–10" />
+        <infoLink id="5d2e-885d-9787-146b" name="Spells remaining in play" targetId="b403-7328-b3ca-4dd7" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="11–14" />
+        <infoLink id="972b-e9ea-93c3-b927" name="Spell targets, sight and templates" targetId="34de-d976-f1cf-5402" type="rule" hidden="false" publicationId="7f78-0cdc-b6a0-484e" page="12, 22" />
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" field="46ca-b687-6a41-f4ab" value="0">
+          <conditions>
+            <condition type="atLeast" field="selections" scope="roster" value="1" childId="f6ed-dd4e-e421-f9d6" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+          </conditions>
+        </modifier>
+        <modifier type="set" field="fb4b-3abf-4414-2dd0" value="0">
+          <conditions>
+            <condition type="atLeast" field="selections" scope="roster" value="1" childId="749c-2579-1282-2ecb" shared="true" includeChildSelections="true" includeChildForces="false" percentValue="false" />
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink id="4bc0-63eb-0907-4864" name="Venerable Lord Kroak" targetId="5b7c-1b30-9c35-a21e" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="6f28-9b98-bdb5-c11e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="760c-3110-6014-a978" name="Lotl-Botl" targetId="bf91-2285-2c33-1153" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="92f6-0d0c-8201-374a" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2f21-874f-e687-cd80" name="Kroq" targetId="e233-6dd1-74c8-1e13" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="a962-f13b-6c1b-880f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1fe4-a6dc-7930-fe5f" name="Oxayotl" targetId="5b6e-52b7-db41-d9db" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="92f5-4d6d-80c1-18fa" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="27f5-9469-7748-ab8d" name="Inxi-Huinzi" targetId="a9e1-cedd-6c31-532c" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="c967-0bce-ab71-be82" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e4d4-5a74-0360-f495" name="Itzi-Bitzi" targetId="1fe1-a2fe-05ae-41ad" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="0bcd-6d2f-e3e3-7c77" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d6e3-5088-d455-cc8c" name="Tenehuini, Prophet of Sotek" targetId="c82c-9b6f-5210-7669" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="d44c-a2ba-c821-2941" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9b88-742a-ddbe-96af" name="Lord Mazdamundi" targetId="b9e8-a3ce-c9b0-cf58" type="selectionEntry" hidden="false" collective="false" import="true">
+      <categoryLinks>
+        <categoryLink id="e679-9fc1-67bc-6c32" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>
