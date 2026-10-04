@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="8003-416f-c795-7368" name="Orcs &amp; Goblins" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="5" authorName="WHFB5 community starter project">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="8003-416f-c795-7368" name="Orcs &amp; Goblins" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="6" authorName="WHFB5 community starter project">
   <forceEntries>
     <forceEntry id="1519-d122-ca55-386b" name="Orcs &amp; Goblins Army" hidden="false">
       <categoryLinks>
@@ -8,6 +8,7 @@
             <constraint id="ef98-a9a9-c10e-7ed0" type="max" value="50" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
           </constraints>
         </categoryLink>
+        <categoryLink id="01ea-b921-50a6-e4f6" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="false" hidden="false" />
         <categoryLink id="c959-655f-fd1c-ced4" name="Mobs" targetId="f175-e819-c0aa-03bb" primary="false" hidden="false">
           <constraints>
             <constraint id="1aab-9fbd-c0f2-104a" type="min" value="25" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
@@ -90,10 +91,13 @@
       </infoLinks>
       <rules>
         <rule id="2add-e120-0111-7008" name="Development and composition checks" hidden="false">
-          <description>v0.5 alpha. New catalogue selection logic has static tests but has not yet been exercised in New Recruit. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
+          <description>Alpha catalogue. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Special Characters remain part of the Characters allowance. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
         </rule>
         <rule id="c3d6-8c27-efda-9741" name="Where to find special characters" hidden="false">
-          <description>Azhag the Slaughterer — Characters; Gorfang Rotgut — Characters; Grom the Paunch with Niblit — Characters; Gorbad Ironclaw — Characters; Morglum Necksnapper — Characters; Oglok the ’Orrible — Characters; Skarsnik with Gobbla — Characters.</description>
+          <description>Azhag the Slaughterer — Special Characters; Gorfang Rotgut — Special Characters; Grom the Paunch with Niblit — Special Characters; Gorbad Ironclaw — Special Characters; Morglum Necksnapper — Special Characters; Oglok the ’Orrible — Special Characters; Skarsnik with Gobbla — Special Characters.</description>
+        </rule>
+        <rule id="54d1-e52d-0de8-f4d2" name="Special Characters allowance" hidden="false">
+          <description>The Special Characters section is for organisation only. These selections still count against the normal Characters allowance; there is no additional points allowance. Named unit champions remain inside their eligible unit’s Models group.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -63656,37 +63660,44 @@
   <entryLinks>
     <entryLink id="f337-b03c-b0b6-6cb4" name="Azhag the Slaughterer" targetId="ac6d-6f1e-b14f-2032" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="a12c-f94f-1659-f9bf" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="a12c-f94f-1659-f9bf" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="2cb9-a25f-cbe7-9bcb" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="ee69-2870-551b-9c3e" name="Gorfang Rotgut" targetId="5904-a9d3-0392-795f" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="e754-e716-10b4-3f5a" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="e754-e716-10b4-3f5a" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="1b87-bd0d-a14c-423e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="42c5-d651-6558-ba95" name="Grom the Paunch with Niblit" targetId="7878-716d-6dee-42d1" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="94cb-2d14-eec1-4ac8" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="94cb-2d14-eec1-4ac8" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="4da2-90f1-ea24-607e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="6461-58f9-ec40-a50f" name="Gorbad Ironclaw" targetId="8b45-8efa-1b88-575a" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="e3eb-c807-916d-fd8e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="e3eb-c807-916d-fd8e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="b8e7-b2bf-8165-a43e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="20a6-20df-f674-7293" name="Morglum Necksnapper" targetId="af49-b680-55ed-bb93" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="3985-6fb1-8277-670f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="3985-6fb1-8277-670f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="54eb-b242-07be-c4f9" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="9e05-b736-3126-17b0" name="Oglok the ’Orrible" targetId="4055-4dd6-d93c-e8e3" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="6ada-fb25-c025-17c7" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="6ada-fb25-c025-17c7" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="653c-29b3-d05a-6c6a" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="47da-a8c2-1c3b-c013" name="Skarsnik with Gobbla" targetId="3ac1-f32b-6362-1a38" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="a09c-8f87-b7ca-81aa" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="a09c-8f87-b7ca-81aa" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="13f2-db06-4d2f-46ab" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
   </entryLinks>

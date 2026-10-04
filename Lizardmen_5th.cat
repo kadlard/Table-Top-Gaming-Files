@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="65b5-c77d-742c-f5f2" name="Lizardmen" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="5" authorName="WHFB5 community starter project">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="65b5-c77d-742c-f5f2" name="Lizardmen" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="6" authorName="WHFB5 community starter project">
   <forceEntries>
     <forceEntry id="5aa1-4335-b31d-80c5" name="Lizardmen Army" hidden="false">
       <categoryLinks>
@@ -8,6 +8,7 @@
             <constraint id="4fe6-fa15-b97b-7720" type="max" value="50" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
           </constraints>
         </categoryLink>
+        <categoryLink id="bee3-c95b-f585-7c6d" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="false" hidden="false" />
         <categoryLink id="9833-5122-73d5-5e31" name="Regiments" targetId="a2b5-2a83-607e-e007" primary="false" hidden="false">
           <constraints>
             <constraint id="275c-bb51-f7f4-70fc" type="min" value="25" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
@@ -80,10 +81,13 @@
       </infoLinks>
       <rules>
         <rule id="729b-7c08-e4d2-202b" name="Development and composition checks" hidden="false">
-          <description>v0.5 alpha. New catalogue selection logic has static tests but has not yet been exercised in New Recruit. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
+          <description>Alpha catalogue. Percentage checks remain provisional: verify categories against the agreed battle limit and avoid double-counting nested champion points. Special Characters remain part of the Characters allowance. Band division, Banshee allowances, profile conflicts and other exceptions are documented in COVERAGE.md.</description>
         </rule>
         <rule id="c5f3-7c53-a72d-9158" name="Where to find special characters" hidden="false">
-          <description>Venerable Lord Kroak — Characters; Lotl-Botl — Characters; Kroq — Characters; Oxayotl — Characters; Inxi-Huinzi — Characters; Itzi-Bitzi — Characters; Tenehuini, Prophet of Sotek — Characters; Lord Mazdamundi — Characters.</description>
+          <description>Venerable Lord Kroak — Special Characters; Lotl-Botl — Special Characters; Kroq — Special Characters; Oxayotl — Special Characters; Inxi-Huinzi — Special Characters; Itzi-Bitzi — Special Characters; Tenehuini, Prophet of Sotek — Special Characters; Lord Mazdamundi — Special Characters.</description>
+        </rule>
+        <rule id="dd70-24aa-cf9e-5afd" name="Special Characters allowance" hidden="false">
+          <description>The Special Characters section is for organisation only. These selections still count against the normal Characters allowance; there is no additional points allowance. Named unit champions remain inside their eligible unit’s Models group.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -9821,42 +9825,50 @@
   <entryLinks>
     <entryLink id="4bc0-63eb-0907-4864" name="Venerable Lord Kroak" targetId="5b7c-1b30-9c35-a21e" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="6f28-9b98-bdb5-c11e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="6f28-9b98-bdb5-c11e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="3a35-0980-877c-198a" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="760c-3110-6014-a978" name="Lotl-Botl" targetId="bf91-2285-2c33-1153" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="92f6-0d0c-8201-374a" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="92f6-0d0c-8201-374a" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="9caf-c89b-71f1-b4f0" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="2f21-874f-e687-cd80" name="Kroq" targetId="e233-6dd1-74c8-1e13" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="a962-f13b-6c1b-880f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="a962-f13b-6c1b-880f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="91c9-278b-a6ed-49bf" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="1fe4-a6dc-7930-fe5f" name="Oxayotl" targetId="5b6e-52b7-db41-d9db" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="92f5-4d6d-80c1-18fa" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="92f5-4d6d-80c1-18fa" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="a94c-0dc4-dcf6-6f1a" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="27f5-9469-7748-ab8d" name="Inxi-Huinzi" targetId="a9e1-cedd-6c31-532c" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="c967-0bce-ab71-be82" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="c967-0bce-ab71-be82" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="7f02-939c-8881-38b5" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="e4d4-5a74-0360-f495" name="Itzi-Bitzi" targetId="1fe1-a2fe-05ae-41ad" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="0bcd-6d2f-e3e3-7c77" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="0bcd-6d2f-e3e3-7c77" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="09d7-eff6-b960-f93a" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="d6e3-5088-d455-cc8c" name="Tenehuini, Prophet of Sotek" targetId="c82c-9b6f-5210-7669" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="d44c-a2ba-c821-2941" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="d44c-a2ba-c821-2941" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="a2a3-bfdb-5af8-e360" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="9b88-742a-ddbe-96af" name="Lord Mazdamundi" targetId="b9e8-a3ce-c9b0-cf58" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="e679-9fc1-67bc-6c32" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="e679-9fc1-67bc-6c32" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="fbd8-21c0-1d9e-a64e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
   </entryLinks>

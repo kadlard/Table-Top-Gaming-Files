@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="10d9-0d30-3fea-412b" name="Wood Elves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="5" authorName="WHFB5 community starter project">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="10d9-0d30-3fea-412b" name="Wood Elves" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="6" authorName="WHFB5 community starter project">
   <forceEntries>
     <forceEntry id="65d1-6af4-5e23-a18d" name="Wood Elves Army" hidden="false">
       <categoryLinks>
@@ -8,6 +8,7 @@
             <constraint id="661a-bad7-5677-9a22" type="max" value="50" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
           </constraints>
         </categoryLink>
+        <categoryLink id="50d5-fc62-09a6-1ba5" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="false" hidden="false" />
         <categoryLink id="7418-4ad2-0e12-12ec" name="Regiments" targetId="a2b5-2a83-607e-e007" primary="false" hidden="false">
           <constraints>
             <constraint id="b84f-8f7a-1b9c-92a6" type="min" value="25" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
@@ -87,10 +88,13 @@
           <description>Summaries use printed book page numbers, not PDF viewer page numbers. Unit abilities and equipment rules also appear with the relevant selections. Effects and temporary characteristic changes are descriptive and are applied during play. Spell deck profiles are reference lists, not granted spells. See COVERAGE.md for gaps and manual checks.</description>
         </rule>
         <rule id="31f8-fa89-cf2b-4f1b" name="Army percentage warning" hidden="false">
-          <description>Live v0.2 testing showed the app using points spent as the percentage basis and displaying champion points in both their regiment category and Characters. These percentage checks remain provisional in v0.5; calculate legal army allowances against the agreed points limit manually.</description>
+          <description>Live testing showed the app using points spent as the percentage basis and displaying champion points in both their regiment category and Characters. These percentage checks remain provisional; calculate legal army allowances against the agreed points limit manually. Special Characters remain part of the Characters allowance.</description>
         </rule>
         <rule id="90d6-249b-1567-1deb" name="Where to find special characters" hidden="false">
-          <description>Orion, King in the Woods — Characters; Ariel, Mage Queen of Loren — Characters; Naieth the Prophetess — Characters; Thalandor — Characters; Lothlann the Brave — Characters; Durthu the Treeman — Characters; Scarloc — champion in Scouts; Wychwethyl the Wild — champion in Wardancers; Sceolan — Characters; Drycha — champion in Dryads; Skaw the Falconer — champion in Archers, Glade Guards, Scouts; Gruarth the Beastmaster — Characters. Skaw also has an independent Characters choice.</description>
+          <description>Orion, King in the Woods — Special Characters; Ariel, Mage Queen of Loren — Special Characters; Naieth the Prophetess — Special Characters; Thalandor — Special Characters; Lothlann the Brave — Special Characters; Durthu the Treeman — Special Characters; Scarloc — champion in Scouts; Wychwethyl the Wild — champion in Wardancers; Sceolan — Special Characters; Drycha — champion in Dryads; Skaw the Falconer — champion in Archers, Glade Guards, Scouts; Gruarth the Beastmaster — Special Characters. Skaw also has an independent Special Characters choice.</description>
+        </rule>
+        <rule id="92bf-137e-6f67-5023" name="Special Characters allowance" hidden="false">
+          <description>The Special Characters section is for organisation only. These selections still count against the normal Characters allowance; there is no additional points allowance. Named unit champions remain inside their eligible unit’s Models group.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -12034,47 +12038,56 @@
   <entryLinks>
     <entryLink id="e555-a0b1-cf14-f047" name="Orion, King in the Woods" targetId="0e28-d811-5429-58fd" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="06f6-5e6f-9e44-2187" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="06f6-5e6f-9e44-2187" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="16ff-2681-7b8f-1a04" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="f823-fc62-454a-2536" name="Ariel, Mage Queen of Loren" targetId="bc1e-4dfb-7c90-de29" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="8f7f-2e83-045b-50e3" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="8f7f-2e83-045b-50e3" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="1049-e012-0e39-12e4" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="51fd-af51-f7c3-c854" name="Naieth the Prophetess" targetId="4a91-ac96-2bdf-5388" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="68ef-bf2d-7e15-5d20" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="68ef-bf2d-7e15-5d20" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="8d8c-078f-951c-4bdd" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="d906-74a7-f78e-1fcd" name="Thalandor" targetId="cc59-105c-a0d7-ffab" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="04a9-94d5-e27d-16d6" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="04a9-94d5-e27d-16d6" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="024d-84fa-2764-949e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="df3a-75e0-8296-f788" name="Lothlann the Brave" targetId="42af-60b7-464a-e0be" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="2034-41be-94b4-7694" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="2034-41be-94b4-7694" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="3893-90e0-c773-325f" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="6899-5a90-656c-035d" name="Durthu the Treeman" targetId="d7cf-f5c2-09b9-5d23" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="dcfc-07e2-113b-fde0" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="dcfc-07e2-113b-fde0" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="8168-1006-42c4-56d0" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="481c-ee3b-b5c5-c17a" name="Sceolan" targetId="dbdf-053e-30ef-eb05" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="5cce-88cb-f285-ba38" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="5cce-88cb-f285-ba38" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="009c-5e96-dced-ec38" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="cdf5-1748-2846-fc66" name="Skaw the Falconer" targetId="f802-9ed6-69a8-58b6" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="3466-6b8a-64a7-b3f5" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="3466-6b8a-64a7-b3f5" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="28d2-2a21-770e-e6b8" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="fc1b-41c2-5c33-e471" name="Gruarth the Beastmaster" targetId="6c93-3ea9-bb29-241e" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="35bf-ec76-6927-5648" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="35bf-ec76-6927-5648" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="d525-d485-6011-5f0e" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
   </entryLinks>

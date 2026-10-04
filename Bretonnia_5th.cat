@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="3372-8911-0e70-3880" name="Bretonnia" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="5" authorName="WHFB5 community starter project">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="3372-8911-0e70-3880" name="Bretonnia" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="c11c-fe58-2043-31f5" gameSystemRevision="6" authorName="WHFB5 community starter project">
   <forceEntries>
     <forceEntry id="ab12-d3b3-6af9-2e95" name="Bretonnia Army" hidden="false">
       <categoryLinks>
@@ -8,6 +8,7 @@
             <constraint id="aee0-5c4f-afdc-f73d" type="max" value="75" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
           </constraints>
         </categoryLink>
+        <categoryLink id="00d0-1073-24fc-3a97" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="false" hidden="false" />
         <categoryLink id="840e-7796-7d16-0f69" name="Knights" targetId="5e16-1480-9f35-be07" primary="false" hidden="false">
           <constraints>
             <constraint id="9b7e-4a84-2024-885f" type="min" value="25" scope="parent" field="0044-15f1-782b-00ea" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" />
@@ -91,10 +92,13 @@
           <description>Summaries use printed book page numbers, not PDF viewer page numbers. Unit abilities and equipment rules also appear with the relevant selections. Effects and temporary characteristic changes are descriptive and are applied during play. Spell deck profiles are reference lists, not granted spells. See COVERAGE.md for gaps and manual checks.</description>
         </rule>
         <rule id="2b80-a29b-f296-ce00" name="Army percentage warning" hidden="false">
-          <description>Live v0.2 testing showed the app using points spent as the percentage basis and displaying champion points in both their regiment category and Characters. These percentage checks remain provisional in v0.5; calculate legal army allowances against the agreed points limit manually.</description>
+          <description>Live testing showed the app using points spent as the percentage basis and displaying champion points in both their regiment category and Characters. These percentage checks remain provisional; calculate legal army allowances against the agreed points limit manually. Special Characters remain part of the Characters allowance.</description>
         </rule>
         <rule id="7a78-a0d4-db52-7e83" name="Where to find special characters" hidden="false">
-          <description>Louen Leoncoeur, the Lionhearted — Characters; Repanse de Lyonesse — Characters; Baron Odo of Outremer with Suliman le Saracen — champion in Knights Errant, Knights of the Realm; Roland le Marechal — champion in Knights Errant, Knights of the Realm; Tancred, Duc de Quenelles — Characters; Bertrand the Brigand with Hugo le Petit and Gui le Gros — champion in Bowmen; Knight of the Perilous Lance — Characters; Tristan le Troubadour with Jules le Jongleur — Characters; Reynard le Chasseur with Groffe and Griffe — champion in Knights Errant, Knights of the Realm, Mounted Squires; Armand d’Aquitaine — Characters; Jasperre le Beau, Dragonslayer — Characters; Bohemond Beastslayer, Duke of Bastonne — Characters; The Green Knight — Characters; Morgiana le Fay, Fay Enchantress — Characters.</description>
+          <description>Louen Leoncoeur, the Lionhearted — Special Characters; Repanse de Lyonesse — Special Characters; Baron Odo of Outremer with Suliman le Saracen — champion in Knights Errant, Knights of the Realm; Roland le Marechal — champion in Knights Errant, Knights of the Realm; Tancred, Duc de Quenelles — Special Characters; Bertrand the Brigand with Hugo le Petit and Gui le Gros — champion in Bowmen; Knight of the Perilous Lance — Special Characters; Tristan le Troubadour with Jules le Jongleur — Special Characters; Reynard le Chasseur with Groffe and Griffe — champion in Knights Errant, Knights of the Realm, Mounted Squires; Armand d’Aquitaine — Special Characters; Jasperre le Beau, Dragonslayer — Special Characters; Bohemond Beastslayer, Duke of Bastonne — Special Characters; The Green Knight — Special Characters; Morgiana le Fay, Fay Enchantress — Special Characters.</description>
+        </rule>
+        <rule id="6ee7-e6ac-b2e1-6f07" name="Special Characters allowance" hidden="false">
+          <description>The Special Characters section is for organisation only. These selections still count against the normal Characters allowance; there is no additional points allowance. Named unit champions remain inside their eligible unit’s Models group.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -11520,52 +11524,62 @@
   <entryLinks>
     <entryLink id="db54-278e-edab-787f" name="Louen Leoncoeur, the Lionhearted" targetId="4e52-454c-825c-7821" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="c1a1-6156-54c3-12a1" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="c1a1-6156-54c3-12a1" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="525d-65af-039a-8df6" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="5967-5415-1e0c-6034" name="Repanse de Lyonesse" targetId="82dc-a9cb-ce78-b069" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="4fe1-5d4d-a8cc-b05d" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="4fe1-5d4d-a8cc-b05d" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="e3a1-7b5e-a7c4-0c68" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="bd4c-ba80-990b-764c" name="Tancred, Duc de Quenelles" targetId="934a-595e-54b1-a96b" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="c699-a252-ad61-9e43" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="c699-a252-ad61-9e43" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="2abc-b4c6-eeab-36d4" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="ebe2-8715-0353-9307" name="Knight of the Perilous Lance" targetId="b3d9-48f9-1286-a368" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="4054-8aac-61dd-cb1f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="4054-8aac-61dd-cb1f" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="cb53-14de-0c88-8e36" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="56da-a043-d884-a3d2" name="Tristan le Troubadour with Jules le Jongleur" targetId="a58c-f00a-9335-85af" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="25b6-d0fd-d761-5a17" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="25b6-d0fd-d761-5a17" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="1f9d-a0cd-6f14-c767" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="f5d8-c4e5-a6ad-3522" name="Armand d’Aquitaine" targetId="a007-84ea-b86a-0e7b" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="d1b3-22d8-fc5d-91b5" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="d1b3-22d8-fc5d-91b5" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="2681-2f3d-fb0c-a315" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="ab6a-50ee-2162-0589" name="Jasperre le Beau, Dragonslayer" targetId="fcb6-1881-9e6a-a4a0" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="8677-c70c-201c-f66d" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="8677-c70c-201c-f66d" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="b845-f944-9051-f2ce" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="52df-dd95-8dc2-c4e7" name="Bohemond Beastslayer, Duke of Bastonne" targetId="52ff-c220-c22d-2651" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="8793-4d6d-d1c7-27be" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="8793-4d6d-d1c7-27be" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="a67f-d52c-35b7-d520" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="3562-d85c-2d4a-ecef" name="The Green Knight" targetId="6196-fc97-5ea8-65d2" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="36fb-a2ff-602d-4e0e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="36fb-a2ff-602d-4e0e" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="3424-5410-8d42-afc1" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
     <entryLink id="452a-7f21-3c0a-a84d" name="Morgiana le Fay, Fay Enchantress" targetId="8281-9bf4-d07b-3def" type="selectionEntry" hidden="false" collective="false" import="true">
       <categoryLinks>
-        <categoryLink id="31ac-88c9-78f9-a7f0" name="Characters" targetId="0114-02b1-a20d-82f1" primary="true" hidden="false" />
+        <categoryLink id="31ac-88c9-78f9-a7f0" name="Characters" targetId="0114-02b1-a20d-82f1" primary="false" hidden="false" />
+        <categoryLink id="4b54-d499-2798-7bbf" name="Special Characters" targetId="2422-ce15-f6d7-4b21" primary="true" hidden="false" />
       </categoryLinks>
     </entryLink>
   </entryLinks>

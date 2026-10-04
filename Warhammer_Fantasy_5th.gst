@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="c11c-fe58-2043-31f5" name="Warhammer Fantasy Battles 5th Edition" revision="5" battleScribeVersion="2.03" authorName="WHFB5 community starter project">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="c11c-fe58-2043-31f5" name="Warhammer Fantasy Battles 5th Edition" revision="6" battleScribeVersion="2.03" authorName="WHFB5 community starter project">
   <costTypes>
     <costType id="0044-15f1-782b-00ea" name="pts" defaultCostLimit="2000" hidden="false" />
   </costTypes>
   <categoryEntries>
     <categoryEntry id="0114-02b1-a20d-82f1" name="Characters" hidden="false" />
+    <categoryEntry id="2422-ce15-f6d7-4b21" name="Special Characters" hidden="false" />
     <categoryEntry id="5e16-1480-9f35-be07" name="Knights" hidden="false" />
     <categoryEntry id="2816-ca43-d125-0d51" name="Commoners" hidden="false" />
     <categoryEntry id="a2b5-2a83-607e-e007" name="Regiments" hidden="false" />
@@ -4389,7 +4390,7 @@ Reference: Rulebook, printed p. 56. Rules summary; consult the source for diagra
   </sharedSelectionEntries>
   <rules>
     <rule id="d8c0-e562-ed50-730c" name="Development release" hidden="false">
-      <description>0.5.0-alpha. Standard armies and shared magic-item selections. Named characters are included for all five armies; allies and optional tournament rules are not implemented. See README.md for manual checks and testing status.</description>
+      <description>0.6.0-alpha. Standard armies and shared magic-item selections. Named characters are included for all five armies; allies and optional tournament rules are not implemented. See README.md for manual checks and testing status.</description>
     </rule>
     <rule id="f3ce-3a99-4cc1-bb41" name="Core roster rules" hidden="false">
       <description>Five models minimum per regiment, including command and champion unless its army entry specifies otherwise. Command models replace ordinary troopers. Champions and character mounts use the Characters allowance. Magic-item category limits and uniqueness follow Warhammer Magic pp. 30–31. Spells are allocated at the table; their cards are not purchased individually.</description>
